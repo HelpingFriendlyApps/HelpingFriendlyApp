@@ -1,4 +1,5 @@
 import React, { ListView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import ShowDetailView from '../containers/ShowDetailView';
 
 export default class ShowRow extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class ShowRow extends React.Component {
   }
 
   chooseShow(rowID) {
-    console.log('rowID: ', rowID);
+    this.props.chooseShow(rowID);
   }
 
   renderShow(show, sectionID, rowID) {
