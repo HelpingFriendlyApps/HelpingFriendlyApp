@@ -1,0 +1,3 @@
+rootProject.name = 'HelpingFriendlyApp'
+
+include ':app'
