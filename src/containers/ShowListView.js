@@ -12,7 +12,8 @@ export class ShowListView extends React.Component {
   chooseShow(rowID) {
     this.props.toRoute({
       name: 'Show Details',
-      component: ShowDetailView
+      component: ShowDetailView,
+      data: this.props.tour.shows[rowID]
     })
   }
 
