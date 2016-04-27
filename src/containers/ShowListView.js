@@ -1,7 +1,6 @@
 import React, { StyleSheet, View } from 'react-native';
 import ShowRow from '../components/ShowRow';
 import ShowDetailView from './ShowDetailView';
-
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
@@ -9,18 +8,20 @@ const mapStateToProps = (state) => ({
 })
 
 export class ShowListView extends React.Component {
-  chooseShow(rowID) {
-    this.props.toRoute({
-      name: 'Show Details',
-      component: ShowDetailView,
-      data: this.props.tour.shows[rowID]
-    })
-  }
-
   constructor(props) {
     super(props);
 
     this.chooseShow = this.chooseShow.bind(this);
+  }
+
+  chooseShow(rowID) {
+    const venueID = this.props.tour.shows[rowID].venueID;
+
+    this.props.toRoute({
+      name: 'Show Details',
+      component: ShowDetailView,
+      data: this.props.tour.venues[venueID]
+    })
   }
 
   render() {

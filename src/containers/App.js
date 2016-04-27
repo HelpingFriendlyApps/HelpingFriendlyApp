@@ -2,7 +2,6 @@ import React, { StyleSheet, View } from 'react-native';
 import Counter from './Counter';
 import ShowListView from './ShowListView';
 import ShowDetailView from './ShowDetailView';
-
 import Router from 'react-native-simple-router';
 
 const firstRoute = {
@@ -33,6 +32,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'lemonchiffon'
   },
   header: {
-    backgroundColor: 'mistyrose'
+    backgroundColor: 'darkseagreen'
   },
 });

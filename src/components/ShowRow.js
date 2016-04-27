@@ -44,7 +44,7 @@ export default class ShowRow extends React.Component {
 
 const styles = StyleSheet.create({
   showsContainer: {
-    marginTop: 50,
+    // marginTop: 50,
   },
   text: {
     fontSize: 30,
@@ -55,9 +55,6 @@ const styles = StyleSheet.create({
   showText: {
     fontSize: 20,
     paddingBottom: 10
-  },
-  dateContainer: {
-
   },
   row: {
     borderWidth: 1,

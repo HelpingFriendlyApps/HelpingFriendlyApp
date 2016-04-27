@@ -5,177 +5,444 @@ const initialState = {
       "date": "6/22",
       "city": "St. Paul",
       "state": "MN",
-      "venue": "Xcel Energy Center"
+      "venue": "Xcel Energy Center",
+      "venueID": 0
     },
     {
       "id": 1,
       "date": "6/24",
       "city": "Chicago",
       "state": "IL",
-      "venue": "Wrigley Field"
+      "venue": "Wrigley Field",
+      "venueID": 1
     },
     {
       "id": 2,
       "date": "6/25",
       "city": "Chicago",
       "state": "IL",
-      "venue": "Wrigley Field"
+      "venue": "Wrigley Field",
+      "venueID": 1
     },
     {
       "id": 3,
       "date": "6/26",
       "city": "Noblesville",
       "state": "IN",
-      "venue": "Deer Creek"
+      "venue": "Deer Creek",
+      "venueID": 2
     },
     {
       "id": 4,
       "date": "6/28",
       "city": "Philadelphia",
       "state": "PA",
-      "venue": "The Mann"
+      "venue": "The Mann",
+      "venueID": 3
     },
     {
       "id": 5,
       "date": "6/29",
       "city": "Philadelphia",
       "state": "PA",
-      "venue": "The Mann"
+      "venue": "The Mann",
+      "venueID": 3
     },
     {
       "id": 6,
       "date": "7/1",
       "city": "Saratoga Springs",
       "state": "NY",
-      "venue": "SPAC"
+      "venue": "SPAC",
+      "venueID": 4
     },
     {
       "id": 7,
       "date": "7/2",
       "city": "Saratoga Springs",
       "state": "NY",
-      "venue": "SPAC"
+      "venue": "SPAC",
+      "venueID": 4
     },
     {
       "id": 8,
       "date": "7/3",
       "city": "Saratoga Springs",
       "state": "NY",
-      "venue": "SPAC"
+      "venue": "SPAC",
+      "venueID": 4
     },
     {
       "id": 9,
       "date": "7/6",
       "city": "Portland",
       "state": "ME",
-      "venue": "Cross Insurance Arena"
+      "venue": "Cross Insurance Arena",
+      "venueID": 5
     },
     {
       "id": 10,
       "date": "7/8",
       "city": "Mansfield",
       "state": "MA",
-      "venue": "Xfinity Center"
+      "venue": "Xfinity Center",
+      "venueID": 6
     },
     {
       "id": 11,
       "date": "7/9",
       "city": "Hartford",
       "state": "CT",
-      "venue": "Xfinity Theatre"
+      "venue": "Xfinity Theatre",
+      "venueID": 7
     },
     {
       "id": 12,
       "date": "7/10",
       "city": "Syracuse",
       "state": "NY",
-      "venue": "Lakeview Amphitheater"
+      "venue": "Lakeview Amphitheater",
+      "venueID": 8
     },
     {
       "id": 13,
       "date": "7/15",
       "city": "George",
       "state": "WA",
-      "venue": "The Gorge"
+      "venue": "The Gorge",
+      "venueID": 9
     },
     {
       "id": 14,
       "date": "7/16",
       "city": "George",
       "state": "WA",
-      "venue": "The Gorge"
+      "venue": "The Gorge",
+      "venueID": 9
     },
     {
       "id": 15,
       "date": "7/18",
       "city": "San Francisco",
       "state": "CA",
-      "venue": "Bill Graham Civic Auditorium"
+      "venue": "Bill Graham Civic Auditorium",
+      "venueID": 10
     },
     {
       "id": 16,
       "date": "7/19",
       "city": "San Francisco",
       "state": "CA",
-      "venue": "Bill Graham Civic Auditorium"
+      "venue": "Bill Graham Civic Auditorium",
+      "venueID": 10
     },
     {
       "id": 17,
       "date": "7/20",
       "city": "San Francisco",
       "state": "CA",
-      "venue": "Bill Graham Civic Auditorium"
+      "venue": "Bill Graham Civic Auditorium",
+      "venueID": 10
     },
     {
       "id": 18,
       "date": "7/22",
       "city": "Inglewood",
       "state": "CA",
-      "venue": "The Forum"
+      "venue": "The Forum",
+      "venueID": 11
     },
     {
       "id": 19,
       "date": "7/23",
       "city": "Chula Vista",
       "state": "CA",
-      "venue": "Sleep Train Amphitheatre"
+      "venue": "Sleep Train Amphitheatre",
+      "venueID": 12
     },
     {
       "id": 20,
       "date": "7/22",
       "city": "Arrington",
       "state": "VA",
-      "venue": "Lockn' Festival"
+      "venue": "Lockn' Festival",
+      "venueID": 13
     },
     {
       "id": 21,
       "date": "7/22",
       "city": "Arrington",
       "state": "VA",
-      "venue": "Lockn' Festival"
+      "venue": "Lockn' Festival",
+      "venueID": 13
     },
     {
       "id": 22,
       "date": "7/22",
       "city": "Commerce City",
       "state": "CO",
-      "venue": "Dick's"
+      "venue": "Dick's",
+      "venueID": 14
     },
     {
       "id": 23,
       "date": "7/22",
       "city": "Commerce City",
       "state": "CO",
-      "venue": "Dick's"
+      "venue": "Dick's",
+      "venueID": 14
     },
     {
       "id": 24,
       "date": "7/22",
       "city": "Commerce City",
       "state": "CO",
-      "venue": "Dick's"
+      "venue": "Dick's",
+      "venueID": 14
     },
-  ]
+  ],
+  venues: [
+    {
+      "id": 0,
+      "name": "Xcel Energy Center",
+      "address": "199 W. Kellogg Blvd",
+      "city": "St. Paul",
+      "state": "MN",
+      "zip": "55102",
+      "phone": "(651) 726-8240",
+      "capacity": "18,568",
+      "showTime": "7:30pm",
+      "doorTime": "6:30pm",
+      "lotTime": "",
+      "timeZone": "CT",
+      "photos": "http://www.levyrestaurants.com/images/xcel-energy-center/xcel_header.jpg",
+      "seatingChart": "http://i.imgur.com/mzlkCcS.png",
+    },
+    {
+      "id": 1,
+      "name": "Wrigley Field",
+      "address": "1060 W. Addison St",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60613",
+      "phone": "(773) 404-2827",
+      "capacity": "42,000",
+      "showTime": "7:00pm",
+      "doorTime": "5:00pm",
+      "lotTime": "",
+      "timeZone": "CT",
+      "photos": "http://www.levyrestaurants.com/images/wrigley-field/wrigley-day-040512-sg-01-jpg.JPG",
+      "seatingChart": "https://www.gotickets.com/cached/_images/maintainwidth/521x500/3289d6466a2cd8483042263f956c9f7d/wrigley-field-concert-4754.gif",
+    },
+    {
+      "id": 2,
+      "name": "Klipsch Music Center",
+      "address": "12880 E 146th St",
+      "city": "Noblesville",
+      "state": "IN",
+      "phone": "(317) 776-8181",
+      "zip": "46060",
+      "capacity": "24,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "3:00pm",
+      "timeZone": "CT",
+      "photos": "http://e994010f48279d85b5d7-a0bc3fbf1884fc0965506ae2b946e1cd.r57.cf2.rackcdn.com/herobox-images/_2000xAUTO_fit_center-center_80/Klipsch-Music-Center-v01-2001x1125.jpg",
+      "seatingChart": "http://intl.ticketseating.com/maps/450w/2167-klipsch-music-center-end-stage.jpg",
+    },
+    {
+      "id": 3,
+      "name": "Mann Center for the Performing Arts",
+      "address": "5201 Parkside Ave",
+      "city": "Philadelphia",
+      "state": "PA",
+      "phone": "(215) 546-7900",
+      "zip": "19131",
+      "capacity": "14,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "",
+      "timeZone": "ET",
+      "photos": "https://c7.staticflickr.com/5/4139/4821882342_d85847a22e_b.jpg",
+      "seatingChart": "http://www.manncenter.org/sites/all/modules/mann_seating/images/Mann-Seating-Chart-2013.png",
+    },
+    {
+      "id": 3,
+      "name": "Saratoga Performing Arts Center",
+      "address": "108 Avenue of the Pines",
+      "city": "Saratoga Springs",
+      "state": "NY",
+      "phone": "(518) 584-9330",
+      "zip": "12866",
+      "capacity": "25,100",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "4:30pm",
+      "timeZone": "ET",
+      "photos": "http://onlinephishtour.com/wp-content/uploads/2011/04/spac10.jpg",
+      "seatingChart": "http://luck.s3.amazonaws.com/venue/135.gif",
+    },
+    {
+      "id": 4,
+      "name": "Cross Insurance Arena",
+      "address": "1 Civic Center Square",
+      "city": "Portland",
+      "state": "ME",
+      "phone": "(207) 775-3458",
+      "zip": "04101",
+      "capacity": "6,733",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "",
+      "timeZone": "ET",
+      "photos": "http://static.bangordailynews.com/wp-content/uploads/2014/12/10038601_H14177325-600x405.jpeg",
+      "seatingChart": "http://www.crossarenaportland.com/images/seatingcharts/full/ln42r.gif",
+    },
+    {
+      "id": 5,
+      "name": "Xfinity Center",
+      "address": "855 South Main St",
+      "city": "Mansfield",
+      "state": "MA",
+      "phone": "(508) 339-2331",
+      "zip": "02048",
+      "capacity": "19,900",
+      "showTime": "7:00pm",
+      "doorTime": "6:00pm",
+      "lotTime": "3:00pm",
+      "timeZone": "ET",
+      "photos": "http://dmbalmanac.com/venuetdd/1373.jpg",
+      "seatingChart": "http://seatingchartview.com/wp-content/uploads/2013/07/Comcast-Center-Seating-Chart.gif",
+    },
+    {
+      "id": 6,
+      "name": "Xfinity Theatre",
+      "address": "61 Savitt Way",
+      "city": "Hartford",
+      "state": "CT",
+      "phone": "(860) 548-7370",
+      "zip": "06120",
+      "capacity": "30,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "4:30pm",
+      "timeZone": "ET",
+      "photos": "http://i46.tinypic.com/2a5gn77.jpg",
+      "seatingChart": "http://seatingchartview.com/wp-content/uploads/2014/05/XFINITY-Theatre-Seating-Chart.png",
+    },
+    {
+      "id": 7,
+      "name": "Lakeview Amphitheater",
+      "address": "490 Restoration Way",
+      "city": "Syracuse",
+      "state": "NY",
+      "phone": "(315) 435-2121",
+      "zip": "13209",
+      "capacity": "17,500",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "4:30pm",
+      "timeZone": "ET",
+      "photos": "http://venuestoday.s3.amazonaws.com/img/lakeview600.jpg",
+      "seatingChart": "http://lakeviewamphitheatre.com/wp-content/uploads/2015/08/Seating8276889.jpg",
+    },
+    {
+      "id": 8,
+      "name": "Gorge Amphitheatre",
+      "address": "754 Silica Road NW",
+      "city": "George",
+      "state": "WA",
+      "phone": "(509) 785-6262",
+      "zip": "98848",
+      "capacity": "20,000",
+      "showTime": "7:30pm",
+      "doorTime": "5:30pm",
+      "lotTime": "2:00pm",
+      "timeZone": "PT",
+      "photos": "http://www.georgeamphitheatre.com/wp-content/uploads/2012/04/the-gorge.jpg",
+      "seatingChart": "http://d2o50i5c2dr30a.cloudfront.net/2658cbdb-7dd0-40b4-a798-e1a5014b4382.jpg",
+    },
+    {
+      "id": 9,
+      "name": "Bill Graham Civic Auditorium",
+      "address": "99 Grove St",
+      "city": "San Francisco",
+      "state": "CA",
+      "phone": "(415) 864-0815",
+      "zip": "94102",
+      "capacity": "7,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "",
+      "timeZone": "PT",
+      "photos": "http://www.adaconcertvenues.com/wp-content/uploads/2015/12/Bill_Graham_Civic.jpg",
+      "seatingChart": "http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nca/39229s_a.gif",
+    },
+    {
+      "id": 10,
+      "name": "The Forum",
+      "address": "3900 W. Manchester Blvd",
+      "city": "Inglewood",
+      "state": "CA",
+      "phone": "(310) 330-7300",
+      "zip": "90305",
+      "capacity": "18,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:30pm",
+      "lotTime": "",
+      "timeZone": "PT",
+      "photos": "https://static.rukkus.com/venue/images/The_Forum-1399.jpg",
+      "seatingChart": "https://www.barrystickets.com/losangeles/forum/charts/phish-forumseating.jpg",
+    },
+    {
+      "id": 11,
+      "name": "Sleep Train Amphitheatre",
+      "address": "2050 Entertainment Circle",
+      "city": "Chula Vista",
+      "state": "CA",
+      "phone": "(619) 671-3500",
+      "zip": "91911",
+      "capacity": "20,500",
+      "showTime": "7:00pm",
+      "doorTime": "6:00pm",
+      "lotTime": "",
+      "timeZone": "PT",
+      "photos": "http://seatingchartview.com/wp-content/uploads/2014/03/Sleep-Train-Amphitheatre-Chula-Vista.jpg",
+      "seatingChart": "http://s1.ticketm.net/ln/en-us/tmimages/venue/maps/wes/32420s.gif",
+    },
+    {
+      "id": 12,
+      "name": "Lockn' Festival",
+      "address": "Oak Ridge Farm",
+      "city": "Arrington",
+      "state": "VA",
+      "phone": "1-(800)-594-TIXX",
+      "zip": "22922",
+      "capacity": "40,000",
+      "showTime": "",
+      "doorTime": "",
+      "lotTime": "",
+      "timeZone": "ET",
+      "photos": "http://40.media.tumblr.com/23eb1f23ec6d3214dca8a6541066beb6/tumblr_mstanxfg6V1sdg8qgo3_1280.jpg",
+      "seatingChart": "",
+    },
+    {
+      "id": 13,
+      "name": "Dick's Sporting Goods Park",
+      "address": "6000 Victory Way",
+      "city": "Commerce City",
+      "state": "CO",
+      "phone": "(303) 727-3500",
+      "zip": "80022",
+      "capacity": "40,000",
+      "showTime": "7:30pm",
+      "doorTime": "6:00pm",
+      "lotTime": "3:00pm",
+      "timeZone": "MT",
+      "photos": "https://tackleandlines.files.wordpress.com/2013/01/564311_10150999996291290_407443937_n.jpg",
+      "seatingChart": "http://www.cheapwholesaletickets.com/seatingcharts/dicks_sporting_goods_park-field_ga-seating-chart.gif",
+    },
+  ],
 };
 
 export default function tour(state = initialState, action) {
