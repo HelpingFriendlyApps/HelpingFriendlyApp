@@ -28,9 +28,13 @@ export default class ShowRow extends React.Component {
     return (
       <TouchableOpacity onPress={() => this.chooseShow(rowID)}>
         <View style={style}>
-          <Text style={styles.date}>{show.date}</Text>
-          <Text style={styles.venue}>{show.venue} </Text>
-          <Text style={styles.location}>{show.city}, {show.state}</Text>
+          <View style={styles.dateContainer}>
+            <Text style={styles.date}>{show.date}</Text>
+          </View>
+          <View style={styles.venueLocationContainer}>
+            <Text style={styles.venue}>{show.venue} </Text>
+            <Text style={styles.location}>{show.city}, {show.state}</Text>
+          </View>
         </View>
       </TouchableOpacity>
     )
@@ -52,6 +56,14 @@ const colors = ['ivory', 'floralwhite'];
 const styles = StyleSheet.create({
   row: {
     padding: 10,
+    flexDirection: 'row'
+  },
+  dateContainer: {
+    // borderWidth: .5,
+    width: 70
+  },
+  venueLocationContainer: {
+    // borderWidth: .4
   },
   date: {
     textAlign: 'left',
@@ -61,5 +73,10 @@ const styles = StyleSheet.create({
   },
   venue: {
     fontSize: 20,
+    color: 'darkslategrey',
+    fontWeight: '500'
   },
+  location: {
+    color: 'darkslategrey',
+  }
 });
