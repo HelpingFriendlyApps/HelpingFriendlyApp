@@ -3,6 +3,7 @@ import Counter from './Counter';
 import ShowListView from './ShowListView';
 import ShowDetailView from './ShowDetailView';
 import Router from 'react-native-simple-router';
+import BackButton from '../components/BackButton';
 
 const firstRoute = {
   name: 'Summer 2016',
@@ -19,18 +20,14 @@ export default class App extends React.Component {
       <Router
         firstRoute={firstRoute}
         headerStyle={styles.header}
+        backButtonComponent={BackButton}
+        backButtonProps={{previousScreen: "Summer 2016"}}
       />
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'lemonchiffon'
-  },
   header: {
     backgroundColor: 'darkseagreen'
   },

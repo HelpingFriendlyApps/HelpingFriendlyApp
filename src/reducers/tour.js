@@ -204,7 +204,7 @@ const initialState = {
   venues: [
     {
       "id": 0,
-      "name": "Xcel Energy Center",
+      "venue": "Xcel Energy Center",
       "address": "199 W. Kellogg Blvd",
       "city": "St. Paul",
       "state": "MN",
@@ -220,7 +220,7 @@ const initialState = {
     },
     {
       "id": 1,
-      "name": "Wrigley Field",
+      "venue": "Wrigley Field",
       "address": "1060 W. Addison St",
       "city": "Chicago",
       "state": "IL",
@@ -236,7 +236,7 @@ const initialState = {
     },
     {
       "id": 2,
-      "name": "Klipsch Music Center",
+      "venue": "Klipsch Music Center",
       "address": "12880 E 146th St",
       "city": "Noblesville",
       "state": "IN",
@@ -252,7 +252,7 @@ const initialState = {
     },
     {
       "id": 3,
-      "name": "Mann Center for the Performing Arts",
+      "venue": "Mann Center for the Performing Arts",
       "address": "5201 Parkside Ave",
       "city": "Philadelphia",
       "state": "PA",
@@ -268,7 +268,7 @@ const initialState = {
     },
     {
       "id": 3,
-      "name": "Saratoga Performing Arts Center",
+      "venue": "Saratoga Performing Arts Center",
       "address": "108 Avenue of the Pines",
       "city": "Saratoga Springs",
       "state": "NY",
@@ -284,7 +284,7 @@ const initialState = {
     },
     {
       "id": 4,
-      "name": "Cross Insurance Arena",
+      "venue": "Cross Insurance Arena",
       "address": "1 Civic Center Square",
       "city": "Portland",
       "state": "ME",
@@ -300,7 +300,7 @@ const initialState = {
     },
     {
       "id": 5,
-      "name": "Xfinity Center",
+      "venue": "Xfinity Center",
       "address": "855 South Main St",
       "city": "Mansfield",
       "state": "MA",
@@ -316,7 +316,7 @@ const initialState = {
     },
     {
       "id": 6,
-      "name": "Xfinity Theatre",
+      "venue": "Xfinity Theatre",
       "address": "61 Savitt Way",
       "city": "Hartford",
       "state": "CT",
@@ -332,7 +332,7 @@ const initialState = {
     },
     {
       "id": 7,
-      "name": "Lakeview Amphitheater",
+      "venue": "Lakeview Amphitheater",
       "address": "490 Restoration Way",
       "city": "Syracuse",
       "state": "NY",
@@ -348,7 +348,7 @@ const initialState = {
     },
     {
       "id": 8,
-      "name": "Gorge Amphitheatre",
+      "venue": "Gorge Amphitheatre",
       "address": "754 Silica Road NW",
       "city": "George",
       "state": "WA",
@@ -364,7 +364,7 @@ const initialState = {
     },
     {
       "id": 9,
-      "name": "Bill Graham Civic Auditorium",
+      "venue": "Bill Graham Civic Auditorium",
       "address": "99 Grove St",
       "city": "San Francisco",
       "state": "CA",
@@ -380,7 +380,7 @@ const initialState = {
     },
     {
       "id": 10,
-      "name": "The Forum",
+      "venue": "The Forum",
       "address": "3900 W. Manchester Blvd",
       "city": "Inglewood",
       "state": "CA",
@@ -396,7 +396,7 @@ const initialState = {
     },
     {
       "id": 11,
-      "name": "Sleep Train Amphitheatre",
+      "venue": "Sleep Train Amphitheatre",
       "address": "2050 Entertainment Circle",
       "city": "Chula Vista",
       "state": "CA",
@@ -412,7 +412,7 @@ const initialState = {
     },
     {
       "id": 12,
-      "name": "Lockn' Festival",
+      "venue": "Lockn' Festival",
       "address": "Oak Ridge Farm",
       "city": "Arrington",
       "state": "VA",
@@ -428,7 +428,7 @@ const initialState = {
     },
     {
       "id": 13,
-      "name": "Dick's Sporting Goods Park",
+      "venue": "Dick's Sporting Goods Park",
       "address": "6000 Victory Way",
       "city": "Commerce City",
       "state": "CO",

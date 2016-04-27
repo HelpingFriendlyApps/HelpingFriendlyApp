@@ -6,20 +6,23 @@ export default class ShowDetailView extends React.Component {
   }
 
   render() {
+    const data = this.props.data;
+
     return (
-      <View>
-        <Text>Name: {this.props.data.name}</Text>
-        <Text>Address: {this.props.data.address}</Text>
-        <Text>Capacity: {this.props.data.capacity}</Text>
-        <Text>Show Time: {this.props.data.showTime}</Text>
-        <Text>Door Time: {this.props.data.doorTime}</Text>
+      <View style={styles.container}>
+        <Text style={styles.venue}>{data.venue}</Text>
         <Image
-          source={{uri: this.props.data.photos}}
+          source={{uri: data.photos}}
           style={styles.pic}
         />
+        <Text>{data.address}, {data.city}, {data.state}</Text>
+        <Text>Capacity: {data.capacity}</Text>
+        <Text>Show Time: {data.showTime}</Text>
+        <Text>Door Time: {data.doorTime}</Text>
         <Image
-          source={{uri: this.props.data.seatingChart}}
+          source={{uri: data.seatingChart}}
           style={styles.pic}
+          resizeMode={'contain'}
         />
       </View>
     );
@@ -27,9 +30,15 @@ export default class ShowDetailView extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+  },
+  venue: {
+    fontSize: 30,
+    letterSpacing: 1,
+  },
   pic: {
     height: 200,
     width: 300,
-    // padding: 50
   }
 });

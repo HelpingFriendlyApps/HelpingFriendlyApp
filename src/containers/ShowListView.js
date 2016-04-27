@@ -26,12 +26,21 @@ export class ShowListView extends React.Component {
 
   render() {
     return (
-      <ShowRow
-        shows={this.props.tour.shows}
-        chooseShow={this.chooseShow}
-      />
+      <View style={styles.listView}>
+        <ShowRow
+          shows={this.props.tour.shows}
+          chooseShow={this.chooseShow}
+        />
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  listView: {
+    flex: 1,
+    backgroundColor: 'ivory'
+  }
+});
 
 export default connect(mapStateToProps)(ShowListView);
