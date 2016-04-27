@@ -2,6 +2,7 @@ import React, { Image, MapView, StyleSheet, TabBarIOS, Text, View } from 'react-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
+import ShowMapView from './ShowMapView';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
@@ -31,44 +32,13 @@ export class ShowDetailView extends React.Component {
   }
 
   render() {
-    const data = this.props.data;
-    const region = {
-      latitude: data.latitude,
-      longitude: data.longitude,
-      latitudeDelta: .01,
-      longitudeDelta: .01
-    };
-    const annotations = [{
-      latitude: data.latitude,
-      longitude: data.longitude,
-      title: data.venue,
-      subtitle: `Show Time: ${data.showTime}`
-    }];
 
     return (
       <View style={styles.pageContainer}>
 
-        <View style={styles.container}>
-          <Text style={styles.venue}>{data.venue}</Text>
-          <View style={styles.basicInfoContainer}>
-            <View style={styles.timeContainer}>
-              <Text style={styles.bold}>Show Time: </Text><Text>{data.showTime}</Text>
-              <Text style={styles.bold}>Doors Open: </Text><Text>{data.doorTime}</Text>
-              <Text style={styles.bold}>Capacity: </Text><Text>{data.capacity}</Text>
-            </View>
-            <View style={styles.locationContainer}>
-              <Text style={styles.address}>{data.address}</Text>
-              <Text style={styles.address}>{data.city}, {data.state}</Text>
-            </View>
-          </View>
-
-          <MapView
-            style={styles.map}
-            region={region}
-            annotations={annotations}
-          >
-          </MapView>
-        </View>
+        <ShowMapView
+          data={this.props.data}
+        />
 
         <TabBarIOS
           tintColor="darkseagreen"
