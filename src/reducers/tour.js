@@ -1,4 +1,19 @@
+import { CHANGE_TAB } from '../actions/tabBar';
+
+export default function tour(state = initialState, action) {
+  switch (action.type) {
+    case CHANGE_TAB:
+      return {
+        ...state,
+        selectedTab: action.nextTab
+      }
+    default:
+      return state;
+  }
+}
+
 const initialState = {
+  selectedTab: "history",
   shows: [
     {
       "id": 0,
@@ -474,7 +489,3 @@ const initialState = {
     },
   ],
 };
-
-export default function tour(state = initialState, action) {
-  return state;
-}
