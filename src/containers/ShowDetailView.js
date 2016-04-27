@@ -1,6 +1,17 @@
 import React, { Image, MapView, StyleSheet, TabBarIOS, Text, View } from 'react-native';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as TabBarActions from '../actions/tabBar';
 
-export default class ShowDetailView extends React.Component {
+const mapStateToProps = (state) => ({
+  tour: state.tour
+})
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(TabBarActions, dispatch);
+}
+
+export class ShowDetailView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -11,6 +22,12 @@ export default class ShowDetailView extends React.Component {
         <Text style={styles.tabText}>sup</Text>
       </View>
     );
+  }
+
+  changeTab(tappedTab) {
+    if (this.props.tour.selectedTab !== tappedTab) {
+      this.props.changeTab(tappedTab);
+    }
   }
 
   render() {
@@ -24,7 +41,8 @@ export default class ShowDetailView extends React.Component {
     const annotations = [{
       latitude: data.latitude,
       longitude: data.longitude,
-      // title: data.venue
+      title: data.venue,
+      subtitle: `Show Time: ${data.showTime}`
     }];
 
     return (
@@ -56,19 +74,23 @@ export default class ShowDetailView extends React.Component {
           tintColor="darkseagreen"
           barTintColor="ivory"
           style={styles.tabBar}
+
         >
           <TabBarIOS.Item
             systemIcon="history"
+            onPress={() => this.changeTab('history')}
           >
           {this.renderTabs()}
           </TabBarIOS.Item>
           <TabBarIOS.Item
             systemIcon="favorites"
+            onPress={() => this.changeTab('favorites')}
           >
           {this.renderTabs()}
           </TabBarIOS.Item>
           <TabBarIOS.Item
             systemIcon="contacts"
+            onPress={() => this.changeTab('contacts')}
           >
           {this.renderTabs()}
           </TabBarIOS.Item>
@@ -138,3 +160,5 @@ const styles = StyleSheet.create({
     // margin: 50
   },
 });
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShowDetailView);
