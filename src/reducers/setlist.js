@@ -11,8 +11,8 @@ export default setlist = (state = initialState, action) => {
     case RECEIVE_TIPH_SETLIST:
       return {
         ...state,
-        showsOnDate: action.setlistData.total_entries,
-        setlist: action.setlistData.data[0].taper_notes
+        showsOnDate: action.showsOnDate,
+        setlist: action.setlist
       }
     default:
       return state;
