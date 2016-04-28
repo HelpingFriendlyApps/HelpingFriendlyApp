@@ -1,6 +1,6 @@
 import React, { Image, StyleSheet, Text, View } from 'react-native';
 
-export default class ImagesTab extends React.Component {
+export default class DetailsTab extends React.Component {
   render() {
     const data = this.props.data;
     const region = {
@@ -31,7 +31,7 @@ export default class ImagesTab extends React.Component {
               <Text style={styles.bold}>Doors Open: </Text>
             </View>
             <View style={styles.locationContainer}>
-              <Text style={styles.bold}>{data.showTime}</Text>
+              <Text style={styles.bold}>{data.showTime} {data.timeZone}</Text>
               <Text style={styles.bold}>{data.doorTime}</Text>
             </View>
         </View>
@@ -46,26 +46,20 @@ const styles = StyleSheet.create({
   },
   imagesContainer: {
     alignItems: 'center',
-    paddingTop: 10,
+    padding: 20,
   },
   photo: {
-    width: 350,
+    width: 335,
     height: 200,
-  },
-  seatingChart: {
-    width: 350,
-    height: 320,
-    marginTop: 20
   },
   venue: {
     fontSize: 30,
     letterSpacing: 1,
     color: 'darkslategrey',
     fontWeight: '500',
-    paddingBottom: 20
   },
   bold: {
-    fontWeight: '500',
+    fontWeight: '600',
     flexDirection: 'row',
     fontSize: 15,
     paddingRight: 5,
@@ -73,6 +67,5 @@ const styles = StyleSheet.create({
   },
   basicInfoContainer: {
     flexDirection: 'row',
-    paddingBottom: 40,
   },
 });
