@@ -13,7 +13,7 @@ export default function tour(state = initialState, action) {
 }
 
 const initialState = {
-  selectedTab: "history",
+  selectedTab: "map",
   shows: [
     {
       "id": 0,
