@@ -1,6 +1,6 @@
 import React, { MapView, StyleSheet, Text, View } from 'react-native';
 
-export default class ShowMapView extends React.Component {
+export default class MapTab extends React.Component {
   render() {
     const data = this.props.data;
     const region = {
@@ -44,16 +44,11 @@ export default class ShowMapView extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     alignItems: 'center',
-    // justifyContent: 'center'
   },
   map: {
     height: 200,
     width: 300
-  },
-  pageContainer: {
-    flex: 1,
   },
   bold: {
     fontWeight: '500',
@@ -76,29 +71,9 @@ const styles = StyleSheet.create({
   },
   venue: {
     fontSize: 25,
-    // height: 70,
-    // paddingTop: 10,
     letterSpacing: 1,
     color: 'darkslategrey',
     fontWeight: '500',
-    // paddingBottom: 30,
     textAlign: 'center'
-  },
-  pic: {
-    height: 200,
-    width: 300,
-  },
-  tabBar: {
-    // backgroundColor: 'darkslategrey',
-    borderWidth: 1,
-    // borderColor: 'red',
-  },
-  tabItems: {
-    // flex: 1,
-    // justifyContent: 'center'
-  },
-  tabText: {
-    // color: 'red',
-    // margin: 50
   },
 });
