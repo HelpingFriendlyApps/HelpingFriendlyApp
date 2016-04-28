@@ -18,17 +18,6 @@ export default class MapTab extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.venue}>{data.venue}</Text>
-        <View style={styles.basicInfoContainer}>
-          <View style={styles.timeContainer}>
-            <Text style={styles.bold}>Show Time: </Text>
-            <Text style={styles.bold}>Doors Open: </Text>
-          </View>
-          <View style={styles.locationContainer}>
-            <Text style={styles.bold}>{data.showTime}</Text>
-            <Text style={styles.bold}>{data.doorTime}</Text>
-          </View>
-        </View>
         <View style={styles.mapContainer}>
           <MapView
             style={styles.map}
@@ -41,7 +30,6 @@ export default class MapTab extends React.Component {
           <Text>1. Collect underpants</Text>
           <Text>2. ?</Text>
           <Text>3. Profit</Text>
-
         </View>
       </View>
     );
@@ -53,24 +41,6 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // flexDirection: 'column',
     padding: 20
-  },
-  venue: {
-    fontSize: 30,
-    letterSpacing: 1,
-    color: 'darkslategrey',
-    fontWeight: '500',
-    paddingBottom: 20
-  },
-  bold: {
-    fontWeight: '500',
-    flexDirection: 'row',
-    fontSize: 15,
-    paddingRight: 5,
-    color: 'darkslategrey'
-  },
-  basicInfoContainer: {
-    flexDirection: 'row',
-    paddingBottom: 40,
   },
   mapContainer: {
     alignItems: 'center',
