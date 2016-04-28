@@ -1,4 +1,5 @@
 import { CHANGE_TAB } from '../actions/tabBar';
+import { SELECT_SHOW } from '../actions/showsList';
 
 export default function tour(state = initialState, action) {
   switch (action.type) {
@@ -7,6 +8,11 @@ export default function tour(state = initialState, action) {
         ...state,
         selectedTab: action.nextTab
       }
+    case SELECT_SHOW:
+      return {
+        ...state,
+        selectedShowID: action.selectedShowID
+      }
     default:
       return state;
   }
@@ -14,6 +20,7 @@ export default function tour(state = initialState, action) {
 
 const initialState = {
   selectedTab: "map",
+  selectedShowID: -1,
   shows: [
     {
       "id": 0,

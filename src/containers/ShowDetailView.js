@@ -25,10 +25,6 @@ export class ShowDetailView extends React.Component {
     }
   }
 
-  fetchSetlist() {
-    this.props.fetchSetlist();
-  }
-
   render() {
     return (
       <View style={styles.pageContainer}>
@@ -45,7 +41,7 @@ export class ShowDetailView extends React.Component {
             selected={this.props.tour.selectedTab === 'map'}
           >
             <DetailsTab
-              data={this.props.data}
+              venueData={this.props.data}
             />
           </TabBarIOS.Item>
 
@@ -55,7 +51,7 @@ export class ShowDetailView extends React.Component {
             selected={this.props.tour.selectedTab === 'images'}
           >
             <MapTab
-              data={this.props.data}
+              venueData={this.props.data}
             />
           </TabBarIOS.Item>
 
@@ -65,7 +61,8 @@ export class ShowDetailView extends React.Component {
             selected={this.props.tour.selectedTab === 'contacts'}
           >
             <HistoryTab
-              fetchSetlist={this.fetchSetlist}
+              showID={this.props.tour.selectedShowID}
+              showData={this.props.tour.shows[this.props.tour.selectedShowID]}
             />
           </TabBarIOS.Item>
         </TabBarIOS>

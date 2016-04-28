@@ -2,26 +2,14 @@ import React, { Image, StyleSheet, Text, View } from 'react-native';
 
 export default class DetailsTab extends React.Component {
   render() {
-    const data = this.props.data;
-    const region = {
-      latitude: data.latitude,
-      longitude: data.longitude,
-      latitudeDelta: .01,
-      longitudeDelta: .01
-    };
-    const annotations = [{
-      latitude: data.latitude,
-      longitude: data.longitude,
-      title: data.venue,
-      subtitle: `${data.address}, ${data.city}, ${data.state}`
-    }];
+    const data = this.props.venueData;
 
     return (
       <View style={styles.container}>
         <Text style={styles.venue}>{data.venue}</Text>
         <View style={styles.imagesContainer}>
           <Image
-            source={{uri: this.props.data.photos}}
+            source={{uri: data.photos}}
             style={styles.photo}
           />
         </View>

@@ -2,7 +2,7 @@ import React, { MapView, StyleSheet, Text, View } from 'react-native';
 
 export default class MapTab extends React.Component {
   render() {
-    const data = this.props.data;
+    const data = this.props.venueData;
     const region = {
       latitude: data.latitude,
       longitude: data.longitude,
