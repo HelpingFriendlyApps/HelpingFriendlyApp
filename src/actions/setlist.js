@@ -7,10 +7,11 @@ export const requestTIPHSetlist = () => {
   }
 }
 
-export const receiveTIPHSetlist = (data) => {
+export const receiveTIPHSetlist = (showsOnDate, setlist) => {
   return {
     type: RECEIVE_TIPH_SETLIST,
-    setlistData: data
+    showsOnDate,
+    setlist
   }
 }
 
@@ -22,8 +23,10 @@ export const fetchSetlist = (apiDate) => {
     return fetch(`http://phish.in/api/v1/shows-on-day-of-year/${apiDate}?sort_attr=date&sort_dir=desc`)
       .then(res => res.json())
       .then(json => {
-        console.log(json)
-        dispatch(receiveTIPHSetlist(json))
+        const showsOnDate = json.total_entries;
+        let setlist = json.data[0].taper_notes;
+
+        dispatch(receiveTIPHSetlist(showsOnDate, setlist))
       });
   }
 }
