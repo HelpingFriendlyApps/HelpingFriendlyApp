@@ -40,7 +40,7 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('map')}
             selected={this.props.tour.selectedTab === 'map'}
           >
-            <MapTab
+            <ImagesTab
               data={this.props.data}
             />
           </TabBarIOS.Item>
@@ -50,7 +50,7 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('images')}
             selected={this.props.tour.selectedTab === 'images'}
           >
-            <ImagesTab
+            <MapTab
               data={this.props.data}
             />
           </TabBarIOS.Item>
