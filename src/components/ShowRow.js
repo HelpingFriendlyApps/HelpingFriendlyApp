@@ -29,7 +29,7 @@ export default class ShowRow extends React.Component {
       <TouchableOpacity onPress={() => this.chooseShow(rowID)}>
         <View style={style}>
           <View style={styles.dateContainer}>
-            <Text style={styles.date}>{show.date}</Text>
+            <Text style={styles.date}>{show.slashDate}</Text>
           </View>
           <View style={styles.venueLocationContainer}>
             <Text style={styles.venue}>{show.venue} </Text>

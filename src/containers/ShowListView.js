@@ -1,11 +1,17 @@
 import React, { StyleSheet, View } from 'react-native';
 import ShowRow from '../components/ShowRow';
 import ShowDetailView from './ShowDetailView';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import * as ShowsListActions from '../actions/showsList';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
 })
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(ShowsListActions, dispatch);
+}
 
 export class ShowListView extends React.Component {
   constructor(props) {
@@ -14,9 +20,9 @@ export class ShowListView extends React.Component {
     this.chooseShow = this.chooseShow.bind(this);
   }
 
-  chooseShow(rowID) {
-    const venueID = this.props.tour.shows[rowID].venueID;
-    const showDate = this.props.tour.shows[rowID].date;
+  chooseShow(showID) {
+    const venueID = this.props.tour.shows[showID].venueID;
+    const showDate = this.props.tour.shows[showID].niceDate;
     const venueData = this.props.tour.venues[venueID];
 
     this.props.toRoute({
@@ -24,6 +30,8 @@ export class ShowListView extends React.Component {
       component: ShowDetailView,
       data: venueData
     })
+
+    this.props.selectShow(showID);
   }
 
   render() {
@@ -45,4 +53,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(mapStateToProps)(ShowListView);
+export default connect(mapStateToProps, mapDispatchToProps)(ShowListView);

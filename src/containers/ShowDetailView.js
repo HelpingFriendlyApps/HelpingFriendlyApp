@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
 import MapTab from './MapTab';
-import ImagesTab from './ImagesTab';
-import LocalTab from './LocalTab';
+import DetailsTab from './DetailsTab';
+import HistoryTab from './HistoryTab';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
@@ -40,8 +40,8 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('map')}
             selected={this.props.tour.selectedTab === 'map'}
           >
-            <ImagesTab
-              data={this.props.data}
+            <DetailsTab
+              venueData={this.props.data}
             />
           </TabBarIOS.Item>
 
@@ -51,7 +51,7 @@ export class ShowDetailView extends React.Component {
             selected={this.props.tour.selectedTab === 'images'}
           >
             <MapTab
-              data={this.props.data}
+              venueData={this.props.data}
             />
           </TabBarIOS.Item>
 
@@ -60,7 +60,10 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('contacts')}
             selected={this.props.tour.selectedTab === 'contacts'}
           >
-            <LocalTab />
+            <HistoryTab
+              showID={this.props.tour.selectedShowID}
+              showData={this.props.tour.shows[this.props.tour.selectedShowID]}
+            />
           </TabBarIOS.Item>
         </TabBarIOS>
 
