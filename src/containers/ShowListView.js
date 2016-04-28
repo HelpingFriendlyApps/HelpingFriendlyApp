@@ -16,7 +16,7 @@ export class ShowListView extends React.Component {
 
   chooseShow(rowID) {
     const venueID = this.props.tour.shows[rowID].venueID;
-    const showDate = this.props.tour.shows[rowID].date;
+    const showDate = this.props.tour.shows[rowID].niceDate;
     const venueData = this.props.tour.venues[venueID];
 
     this.props.toRoute({
