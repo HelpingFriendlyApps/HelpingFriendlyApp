@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
 import MapTab from './MapTab';
 import ImagesTab from './ImagesTab';
+import LocalTab from './LocalTab';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
@@ -16,14 +17,6 @@ const mapDispatchToProps = (dispatch) => {
 export class ShowDetailView extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  renderTabs() {
-    return (
-      <View style={styles.tabItems}>
-        <Text style={styles.tabText}>This is the {this.props.tour.selectedTab} tab</Text>
-      </View>
-    );
   }
 
   changeTab(tappedTab) {
@@ -67,7 +60,7 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('contacts')}
             selected={this.props.tour.selectedTab === 'contacts'}
           >
-            {this.renderTabs()}
+            <LocalTab />
           </TabBarIOS.Item>
         </TabBarIOS>
 

@@ -10,7 +10,7 @@ export default class ImagesTab extends React.Component {
         />
         <Image
           source={{uri: this.props.data.seatingChart}}
-          style={styles.photo}
+          style={styles.seatingChart}
         />
       </View>
     );
@@ -25,5 +25,10 @@ const styles = StyleSheet.create({
   photo: {
     width: 350,
     height: 200,
+  },
+  seatingChart: {
+    width: 350,
+    height: 320,
+    marginTop: 20
   }
 });
