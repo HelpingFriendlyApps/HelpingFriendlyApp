@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch) => {
 export class ShowListView extends React.Component {
   constructor(props) {
     super(props);
-
     this.chooseShow = this.chooseShow.bind(this);
   }
 
@@ -29,7 +28,7 @@ export class ShowListView extends React.Component {
       name: showDate,
       component: ShowDetailView,
       data: venueData
-    })
+    });
 
     this.props.selectShow(showID);
   }

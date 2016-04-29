@@ -6,7 +6,6 @@ export default class ShowRow extends React.Component {
     super(props);
 
     let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-
     this.state = {
       showsDataSource: ds.cloneWithRows(this.props.shows)
     };
@@ -59,11 +58,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   dateContainer: {
-    // borderWidth: .5,
     width: 70
-  },
-  venueLocationContainer: {
-    // borderWidth: .4
   },
   date: {
     textAlign: 'left',

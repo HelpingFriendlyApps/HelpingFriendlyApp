@@ -14,8 +14,6 @@ const mapDispatchToProps = (dispatch) => {
 export class LocalTab extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log(props);
     this.fetchSetlist = this.fetchSetlist.bind(this);
   }
 

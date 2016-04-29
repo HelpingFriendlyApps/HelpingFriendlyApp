@@ -28,7 +28,6 @@ export class ShowDetailView extends React.Component {
   render() {
     return (
       <View style={styles.pageContainer}>
-
         <TabBarIOS
           tintColor="darkseagreen"
           barTintColor="ivory"
@@ -66,7 +65,6 @@ export class ShowDetailView extends React.Component {
             />
           </TabBarIOS.Item>
         </TabBarIOS>
-
       </View>
     );
   }
