@@ -25,7 +25,6 @@ export const fetchSetlist = (apiDate) => {
       .then(json => {
         const showsOnDate = json.total_entries;
         let setlist = json.data[0].taper_notes;
-
         dispatch(receiveTIPHSetlist(showsOnDate, setlist))
       });
   }

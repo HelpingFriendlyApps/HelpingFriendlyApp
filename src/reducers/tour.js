@@ -1,7 +1,7 @@
 import { CHANGE_TAB } from '../actions/tabBar';
 import { SELECT_SHOW } from '../actions/showsList';
 
-export default function tour(state = initialState, action) {
+export default tour = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_TAB:
       return {

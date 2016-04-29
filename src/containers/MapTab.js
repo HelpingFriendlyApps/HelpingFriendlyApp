@@ -38,8 +38,6 @@ export default class MapTab extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // alignItems: 'center',
-    // flexDirection: 'column',
     padding: 20
   },
   mapContainer: {
@@ -50,8 +48,6 @@ const styles = StyleSheet.create({
     height: 200,
     width: 340,
     alignItems: 'center'
-  },
-  bottomContainer: {
   },
   topThree: {
     fontSize: 20,
