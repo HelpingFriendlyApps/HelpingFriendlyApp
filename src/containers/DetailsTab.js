@@ -1,17 +1,42 @@
 import React, { Image, StyleSheet, Text, View } from 'react-native';
+import Carousel from 'react-native-carousel';
 
 export default class DetailsTab extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const data = this.props.venueData;
+
+    const photoCollection = (
+      data.photos.map(photo =>
+        <Image
+          source={{uri: photo}}
+          style={styles.photo}
+          key={data.photos.indexOf(photo)}
+        />
+      )
+    );
 
     return (
       <View style={styles.container}>
         <Text style={styles.venue}>{data.venue}</Text>
-        <View style={styles.imagesContainer}>
-          <Image
-            source={{uri: data.photos}}
-            style={styles.photo}
-          />
+        <View style={styles.carouselContainer}>
+          <Carousel
+            width={340}
+            indicatorSize={30}
+            animate={false}
+            indicatorOffset={0}
+            indicatorColor={'darkseagreen'}
+            inactiveIndicatorColor={'ivory'}
+          >
+            {photoCollection}
+            <Image
+              source={{uri: data.seatingChart}}
+              style={styles.photo}
+            />
+          </Carousel>
         </View>
           <View style={styles.basicInfoContainer}>
             <View style={styles.timeContainer}>
@@ -32,9 +57,10 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
   },
-  imagesContainer: {
-    alignItems: 'center',
-    padding: 20,
+  carouselContainer: {
+    // alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20
   },
   photo: {
     width: 335,
