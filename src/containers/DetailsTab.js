@@ -19,23 +19,28 @@ export default class DetailsTab extends React.Component {
       )
     );
 
+    photoCollection.push(
+      <Image
+        source={{uri: data.seatingChart}}
+        style={styles.photo}
+        key={photoCollection.length}
+       />
+     );
+
     return (
       <View style={styles.container}>
         <Text style={styles.venue}>{data.venue}</Text>
         <View style={styles.carouselContainer}>
           <Carousel
             width={340}
-            indicatorSize={30}
+            indicatorSize={20}
+            indicatorSpace={15}
             animate={false}
-            indicatorOffset={0}
+            indicatorOffset={5}
             indicatorColor={'darkseagreen'}
             inactiveIndicatorColor={'ivory'}
           >
             {photoCollection}
-            <Image
-              source={{uri: data.seatingChart}}
-              style={styles.photo}
-            />
           </Carousel>
         </View>
           <View style={styles.basicInfoContainer}>
