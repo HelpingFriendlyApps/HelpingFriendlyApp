@@ -9,15 +9,15 @@ export default class DetailsTab extends React.Component {
   }
 
   displayBrowser() {
-    console.log('this.props: ', this.props)
     this.props.toRoute({
       name: 'Cash or Trade',
-      component: WebBrowser
+      component: WebBrowser,
+      data: this.props.data.showData
     });
   }
 
   render() {
-    const data = this.props.venueData;
+    const data = this.props.data.venueData;
 
     const photoCollection = (
       data.photos.map(photo =>

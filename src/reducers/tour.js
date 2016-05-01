@@ -24,253 +24,292 @@ const initialState = {
   shows: [
     {
       "id": 0,
-      "mmddyy": "06-22-16",
+      "yyyymmdd": "2016-06-22",
       "slashDate": "6/22",
       "niceDate": "June 22",
-      "city": "St. Paul",
+      "city": "Saint Paul",
       "state": "MN",
       "venue": "Xcel Energy Center",
-      "venueID": 0
+      "venueID": 0,
+      "cotID": 18055
     },
     {
       "id": 1,
-      "mmddyy": "06-24-16",
+      "yyyymmdd": "2016-06-24",
       "slashDate": "6/24",
       "niceDate": "June 24",
       "city": "Chicago",
       "state": "IL",
       "venue": "Wrigley Field",
-      "venueID": 1
+      "venueID": 1,
+      "cotID": 18032
     },
     {
       "id": 2,
-      "mmddyy": "06-25-16",
+      "yyyymmdd": "2016-06-25",
       "slashDate": "6/25",
       "niceDate": "June 25",
       "city": "Chicago",
       "state": "IL",
       "venue": "Wrigley Field",
-      "venueID": 1
+      "venueID": 1,
+      "cotID": 18033
     },
     {
       "id": 3,
-      "mmddyy": "06-26-16",
+      "yyyymmdd": "2016-06-26",
       "slashDate": "6/26",
       "niceDate": "June 26",
       "city": "Noblesville",
       "state": "IN",
-      "venue": "Deer Creek",
-      "venueID": 2
+      "venue": "Klipsch Music Center",
+      "venueID": 2,
+      "cotID": 18044
     },
     {
       "id": 4,
-      "mmddyy": "06-28-16",
+      "yyyymmdd": "2016-06-28",
       "slashDate": "6/28",
       "niceDate": "June 28",
       "city": "Philadelphia",
       "state": "PA",
       "venue": "The Mann",
-      "venueID": 3
+      "venueID": 3,
+      "cotID": 18003,
+      "cotVenue": "the-mann-center-for-the-performing-arts"
     },
     {
       "id": 5,
-      "mmddyy": "06-29-16",
+      "yyyymmdd": "2016-06-29",
       "slashDate": "6/29",
       "niceDate": "June 29",
       "city": "Philadelphia",
       "state": "PA",
       "venue": "The Mann",
-      "venueID": 3
+      "venueID": 3,
+      "cotID": 18031,
+      "cotVenue": "the-mann-center-for-the-performing-arts"
     },
     {
       "id": 6,
-      "mmddyy": "07-01-16",
+      "yyyymmdd": "2016-07-01",
       "slashDate": "7/1",
       "niceDate": "July 1",
       "city": "Saratoga Springs",
       "state": "NY",
       "venue": "SPAC",
-      "venueID": 4
+      "venueID": 4,
+      "cotID": 18028,
+      "cotVenue": "saratoga-performing-arts-center"
     },
     {
       "id": 7,
-      "mmddyy": "07-02-16",
+      "yyyymmdd": "2016-07-02",
       "slashDate": "7/2",
       "niceDate": "July 2",
       "city": "Saratoga Springs",
       "state": "NY",
       "venue": "SPAC",
-      "venueID": 4
+      "venueID": 4,
+      "cotID": 18029,
+      "cotVenue": "saratoga-performing-arts-center"
     },
     {
       "id": 8,
-      "mmddyy": "07-03-16",
+      "yyyymmdd": "2016-07-03",
       "slashDate": "7/3",
       "niceDate": "July 3",
       "city": "Saratoga Springs",
       "state": "NY",
       "venue": "SPAC",
-      "venueID": 4
+      "venueID": 4,
+      "cotID": 18030,
+      "cotVenue": "saratoga-performing-arts-center"
     },
     {
       "id": 9,
-      "mmddyy": "07-06-16",
+      "yyyymmdd": "2016-07-06",
       "slashDate": "7/6",
       "niceDate": "July 6",
       "city": "Portland",
       "state": "ME",
       "venue": "Cross Insurance Arena",
-      "venueID": 5
+      "venueID": 5,
+      "cotID": 18041
     },
     {
       "id": 10,
-      "mmddyy": "07-08-16",
+      "yyyymmdd": "2016-07-08",
       "slashDate": "7/8",
       "niceDate": "July 8",
       "city": "Mansfield",
       "state": "MA",
       "venue": "Xfinity Center",
-      "venueID": 6
+      "venueID": 6,
+      "cotID": 18056,
+      "cotVenue": "xfinity-center-formerly-comcast-center"
     },
     {
       "id": 11,
-      "mmddyy": "07-09-16",
+      "yyyymmdd": "2016-07-09",
       "slashDate": "7/9",
       "niceDate": "July 9",
       "city": "Hartford",
       "state": "CT",
       "venue": "Xfinity Theatre",
-      "venueID": 7
+      "venueID": 7,
+      "cotID": 18034
     },
     {
       "id": 12,
-      "mmddyy": "07-10-16",
+      "yyyymmdd": "2016-07-10",
       "slashDate": "7/10",
       "niceDate": "July 10",
       "city": "Syracuse",
       "state": "NY",
       "venue": "Lakeview Amphitheater",
-      "venueID": 8
+      "venueID": 8,
+      "cotID": 17997
     },
     {
       "id": 13,
-      "mmddyy": "07-15-16",
+      "yyyymmdd": "2016-07-15",
       "slashDate": "7/15",
       "niceDate": "July 15",
       "city": "George",
       "state": "WA",
       "venue": "The Gorge",
-      "venueID": 9
+      "venueID": 9,
+      "cotID": 18078,
+      "cotVenue": "the-gorge-amphitheatre"
     },
     {
       "id": 14,
-      "mmddyy": "07-16-16",
+      "yyyymmdd": "2016-07-16",
       "slashDate": "7/16",
       "niceDate": "July 16",
       "city": "George",
       "state": "WA",
       "venue": "The Gorge",
-      "venueID": 9
+      "venueID": 9,
+      "cotID": 18079,
+      "cotVenue": "the-gorge-amphitheatre"
     },
     {
       "id": 15,
-      "mmddyy": "07-18-16",
+      "yyyymmdd": "2016-07-18",
       "slashDate": "7/18",
       "niceDate": "July 18",
       "city": "San Francisco",
       "state": "CA",
       "venue": "Bill Graham Civic Auditorium",
-      "venueID": 10
+      "venueID": 10,
+      "cotID": 18045,
+      "cotVenue": "bill-graham-civic-center-auditorium"
     },
     {
       "id": 16,
-      "mmddyy": "07-19-16",
+      "yyyymmdd": "2016-07-19",
       "slashDate": "7/19",
       "niceDate": "July 19",
       "city": "San Francisco",
       "state": "CA",
       "venue": "Bill Graham Civic Auditorium",
-      "venueID": 10
+      "venueID": 10,
+      "cotID": 18046,
+      "cotVenue": "bill-graham-civic-center-auditorium"
     },
     {
       "id": 17,
-      "mmddyy": "07-20-16",
+      "yyyymmdd": "2016-07-20",
       "slashDate": "7/20",
       "niceDate": "July 20",
       "city": "San Francisco",
       "state": "CA",
       "venue": "Bill Graham Civic Auditorium",
-      "venueID": 10
+      "venueID": 10,
+      "cotID": 18047,
+      "cotVenue": "bill-graham-civic-center-auditorium"
     },
     {
       "id": 18,
-      "mmddyy": "07-22-16",
+      "yyyymmdd": "2016-07-22",
       "slashDate": "7/22",
       "niceDate": "July 22",
       "city": "Inglewood",
       "state": "CA",
       "venue": "The Forum",
-      "venueID": 11
+      "venueID": 11,
+      "cotID": 18051
     },
     {
       "id": 19,
-      "mmddyy": "07-23-16",
+      "yyyymmdd": "2016-07-23",
       "slashDate": "7/23",
       "niceDate": "July 23",
       "city": "Chula Vista",
       "state": "CA",
       "venue": "Sleep Train Amphitheatre",
-      "venueID": 12
+      "venueID": 12,
+      "cotID": 18054
     },
     {
       "id": 20,
-      "mmddyy": "08-26-16",
+      "yyyymmdd": "2016-08-26",
       "slashDate": "8/26",
       "niceDate": "August 26",
       "city": "Arrington",
       "state": "VA",
       "venue": "Lockn' Festival",
-      "venueID": 13
+      "venueID": 13,
+      "cotID": 0
     },
     {
       "id": 21,
-      "mmddyy": "08-28-16",
+      "yyyymmdd": "2016-08-28",
       "slashDate": "8/28",
       "niceDate": "August 28",
       "city": "Arrington",
       "state": "VA",
       "venue": "Lockn' Festival",
-      "venueID": 13
+      "venueID": 13,
+      "cotID": 0
     },
     {
       "id": 22,
-      "mmddyy": "09-02-16",
+      "yyyymmdd": "2016-09-02",
       "slashDate": "9/2",
       "niceDate": "September 2",
       "city": "Commerce City",
       "state": "CO",
       "venue": "Dick's",
-      "venueID": 14
+      "venueID": 14,
+      "cotID": 18050,
+      "cotVenue": "dick-s-sporting-goods-park"
     },
     {
       "id": 23,
-      "mmddyy": "09-03-16",
+      "yyyymmdd": "2016-09-03",
       "slashDate": "9/3",
       "niceDate": "September 3",
       "city": "Commerce City",
       "state": "CO",
       "venue": "Dick's",
-      "venueID": 14
+      "venueID": 14,
+      "cotID": 18048,
+      "cotVenue": "dick-s-sporting-goods-park"
     },
     {
       "id": 24,
-      "mmddyy": "09-04-16",
+      "yyyymmdd": "2016-09-04",
       "slashDate": "9/4",
       "niceDate": "September 4",
       "city": "Commerce City",
       "state": "CO",
       "venue": "Dick's",
-      "venueID": 14
+      "venueID": 14,
+      "cotID": 18049,
+      "cotVenue": "dick-s-sporting-goods-park"
     },
   ],
   venues: [
