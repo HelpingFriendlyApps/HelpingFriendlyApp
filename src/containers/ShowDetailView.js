@@ -41,6 +41,7 @@ export class ShowDetailView extends React.Component {
           >
             <DetailsTab
               venueData={this.props.data}
+              toRoute={this.props.toRoute}
             />
           </TabBarIOS.Item>
 
