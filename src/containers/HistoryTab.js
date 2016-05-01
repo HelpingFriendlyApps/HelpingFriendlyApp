@@ -18,7 +18,7 @@ export class LocalTab extends React.Component {
   }
 
   fetchSetlist(apiDate) {
-    const apiFriendlyDate = this.props.showData.mmddyy.slice(0,5);
+    const apiFriendlyDate = this.props.showData.yyyymmdd.slice(5);
     this.props.fetchSetlist(apiFriendlyDate);
   }
 
