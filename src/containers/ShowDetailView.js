@@ -51,7 +51,7 @@ export class ShowDetailView extends React.Component {
             selected={this.props.tour.selectedTab === 'images'}
           >
             <MapTab
-              venueData={this.props.data}
+              data={this.props.data}
             />
           </TabBarIOS.Item>
 
