@@ -1,9 +1,19 @@
-import React, { Image, StyleSheet, Text, View } from 'react-native';
+import React, { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
+import WebBrowser from '../components/WebBrowser';
 
 export default class DetailsTab extends React.Component {
   constructor(props) {
     super(props);
+    this.displayBrowser = this.displayBrowser.bind(this);
+  }
+
+  displayBrowser() {
+    console.log('this.props: ', this.props)
+    this.props.toRoute({
+      name: 'Cash or Trade',
+      component: WebBrowser
+    });
   }
 
   render() {
@@ -53,6 +63,13 @@ export default class DetailsTab extends React.Component {
               <Text style={styles.bold}>{data.doorTime}</Text>
             </View>
         </View>
+        <View style={styles.cotButtonContainer}>
+          <TouchableOpacity onPress={this.displayBrowser}>
+            <View style={styles.cotButton}>
+              <Text>Cash or Trade</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -61,6 +78,7 @@ export default class DetailsTab extends React.Component {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    // alignItems: 'center'
   },
   carouselContainer: {
     // alignItems: 'center',
@@ -86,5 +104,20 @@ const styles = StyleSheet.create({
   },
   basicInfoContainer: {
     flexDirection: 'row',
+    // alignItems: 'center'
+  },
+  cotButtonContainer: {
+    alignItems: 'center',
+    margin: 40
+  },
+  cotButton: {
+    height: 60,
+    width: 160,
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    borderColor: 'darkslategrey',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 });
