@@ -21,13 +21,18 @@ export class ShowListView extends React.Component {
 
   chooseShow(showID) {
     const venueID = this.props.tour.shows[showID].venueID;
-    const showDate = this.props.tour.shows[showID].niceDate;
+    const showData = this.props.tour.shows[showID];
     const venueData = this.props.tour.venues[venueID];
+    const showDate = showData.niceDate;
+    const data = {
+      venueData,
+      showData
+    };
 
     this.props.toRoute({
       name: showDate,
       component: ShowDetailView,
-      data: venueData
+      data: data
     });
 
     this.props.selectShow(showID);
