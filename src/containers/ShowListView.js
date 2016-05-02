@@ -44,6 +44,7 @@ export class ShowListView extends React.Component {
         <ShowRow
           shows={this.props.tour.shows}
           chooseShow={this.chooseShow}
+          venueData={this.props.tour.venues}
         />
       </View>
     );
