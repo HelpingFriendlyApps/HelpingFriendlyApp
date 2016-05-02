@@ -57,28 +57,40 @@ export default class ShowRow extends React.Component {
   }
 }
 
-const colors = ['ivory', 'floralwhite'];
+// const colors = ['ivory', 'floralwhite'];
 
 const styles = StyleSheet.create({
   row: {
-    padding: 10,
-    flexDirection: 'row'
+    padding: 20,
+    flexDirection: 'row',
+  },
+  backgroundPhoto: {
+    flex: 1,
+    marginTop: 3,
+    marginBottom: 3,
   },
   dateContainer: {
-    width: 70
+    width: 60
   },
   date: {
     textAlign: 'left',
-    color: 'darkslategrey',
+    color: 'white',
     fontSize: 20,
-    fontWeight: '500'
+    fontWeight: '600',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1}
   },
   venue: {
-    fontSize: 20,
-    color: 'darkslategrey',
-    fontWeight: '500'
+    fontSize: 22,
+    color: 'white',
+    fontWeight: '600',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1}
   },
   location: {
-    color: 'darkslategrey',
+    color: 'white',
+    fontWeight: '400',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1}
   }
 });

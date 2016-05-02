@@ -54,7 +54,7 @@ export class ShowListView extends React.Component {
 const styles = StyleSheet.create({
   listView: {
     flex: 1,
-    backgroundColor: 'ivory'
+    backgroundColor: 'transparent'
   }
 });
 
