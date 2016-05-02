@@ -44,6 +44,7 @@ export class ShowListView extends React.Component {
         <ShowRow
           shows={this.props.tour.shows}
           chooseShow={this.chooseShow}
+          venueData={this.props.tour.venues}
         />
       </View>
     );
@@ -53,7 +54,7 @@ export class ShowListView extends React.Component {
 const styles = StyleSheet.create({
   listView: {
     flex: 1,
-    backgroundColor: 'ivory'
+    backgroundColor: 'transparent'
   }
 });
 

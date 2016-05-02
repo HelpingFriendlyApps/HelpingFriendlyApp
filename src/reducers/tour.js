@@ -364,7 +364,7 @@ const initialState = {
       "doorTime": "6:00pm",
       "lotTime": "3:00pm",
       "timeZone": "CT",
-      "photos": ["http://e994010f48279d85b5d7-a0bc3fbf1884fc0965506ae2b946e1cd.r57.cf2.rackcdn.com/herobox-images/_2000xAUTO_fit_center-center_80/Klipsch-Music-Center-v01-2001x1125.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/07/ac/21/c5/the-lawn-at-klipsch-music.jpg"],
+      "photos": ["https://media-cdn.tripadvisor.com/media/photo-s/07/ac/21/c5/the-lawn-at-klipsch-music.jpg", "http://e994010f48279d85b5d7-a0bc3fbf1884fc0965506ae2b946e1cd.r57.cf2.rackcdn.com/herobox-images/_2000xAUTO_fit_center-center_80/Klipsch-Music-Center-v01-2001x1125.jpg"],
       "seatingChart": "http://intl.ticketseating.com/maps/450w/2167-klipsch-music-center-end-stage.jpg",
     },
     {
@@ -382,7 +382,7 @@ const initialState = {
       "doorTime": "6:00pm",
       "lotTime": "",
       "timeZone": "ET",
-      "photos": ["https://c7.staticflickr.com/5/4139/4821882342_d85847a22e_b.jpg", "http://www.uwishunu.com/wp-content/uploads/2014/07/The-Philadelphia-Orchestra-The-Mann-680uw.jpg"],
+      "photos": ["http://www.beamltd.com/wp-content/uploads/2013/10/mann-center_Halkin-main-stage.jpg", "https://c7.staticflickr.com/5/4139/4821882342_d85847a22e_b.jpg", "http://www.uwishunu.com/wp-content/uploads/2014/07/The-Philadelphia-Orchestra-The-Mann-680uw.jpg"],
       "seatingChart": "http://www.manncenter.org/sites/all/modules/mann_seating/images/Mann-Seating-Chart-2013.png",
     },
     {
@@ -400,7 +400,7 @@ const initialState = {
       "doorTime": "6:00pm",
       "lotTime": "4:30pm",
       "timeZone": "ET",
-      "photos": ["http://onlinephishtour.com/wp-content/uploads/2011/04/spac10.jpg", "http://discoversaratoga.org/wp-content/uploads/2015/01/spac-at-dusk-1200x800.jpg", "http://1.bp.blogspot.com/-XMSfF1FeSLo/UdrRwn-_HSI/AAAAAAAABbk/y1jFrntEiNY/s1600/1063822_10151448849506290_1834474559_o.jpg", "http://wac.450f.edgecastcdn.net/80450F/wgna.com/files/2012/02/SPAC-Flicker-User-Smantha-Decker-630x376.jpg"],
+      "photos": ["http://discoversaratoga.org/wp-content/uploads/2015/01/spac-at-dusk-1200x800.jpg", "http://onlinephishtour.com/wp-content/uploads/2011/04/spac10.jpg", "http://1.bp.blogspot.com/-XMSfF1FeSLo/UdrRwn-_HSI/AAAAAAAABbk/y1jFrntEiNY/s1600/1063822_10151448849506290_1834474559_o.jpg", "http://wac.450f.edgecastcdn.net/80450F/wgna.com/files/2012/02/SPAC-Flicker-User-Smantha-Decker-630x376.jpg"],
       "seatingChart": "http://luck.s3.amazonaws.com/venue/135.gif",
     },
     {
@@ -490,7 +490,7 @@ const initialState = {
       "doorTime": "5:30pm",
       "lotTime": "2:00pm",
       "timeZone": "PT",
-      "photos": ["http://www.georgeamphitheatre.com/wp-content/uploads/2012/04/the-gorge.jpg", "http://www.georgeamphitheatre.com/wp-content/uploads/2015/05/sasquatch-featured.png", "http://www.livenationpremiumseats.com/images/1440/620/400/image.jpg", "http://static1.squarespace.com/static/56971a1bfd5d08f1247677c4/56972f743b0be3f9ce884250/56972f798b38d4f1427f1d33/1452748669720/index--element91+(1).jpg"],
+      "photos": ["http://www.georgeamphitheatre.com/wp-content/uploads/2015/05/sasquatch-featured.png", "http://www.georgeamphitheatre.com/wp-content/uploads/2012/04/the-gorge.jpg", "http://www.livenationpremiumseats.com/images/1440/620/400/image.jpg", "http://static1.squarespace.com/static/56971a1bfd5d08f1247677c4/56972f743b0be3f9ce884250/56972f798b38d4f1427f1d33/1452748669720/index--element91+(1).jpg"],
       "seatingChart": "http://d2o50i5c2dr30a.cloudfront.net/2658cbdb-7dd0-40b4-a798-e1a5014b4382.jpg",
     },
     {
@@ -580,7 +580,7 @@ const initialState = {
       "doorTime": "6:00pm",
       "lotTime": "3:00pm",
       "timeZone": "MT",
-      "photos": ["https://tackleandlines.files.wordpress.com/2013/01/564311_10150999996291290_407443937_n.jpg", "http://www.turnerconstruction.com/Files/ProjectImage?url=%2Fsites%2Fmarketingstories%2FMarketing%20Story%20Images%2Foriginal.d0ef2cb1-761d-4b23-8904-16029412f241.jpg&width=707&height=470&crop=True&jpegQuality=95"],
+      "photos": ["http://www.turnerconstruction.com/Files/ProjectImage?url=%2Fsites%2Fmarketingstories%2FMarketing%20Story%20Images%2Foriginal.d0ef2cb1-761d-4b23-8904-16029412f241.jpg&width=707&height=470&crop=True&jpegQuality=95", "https://tackleandlines.files.wordpress.com/2013/01/564311_10150999996291290_407443937_n.jpg"],
       "seatingChart": "http://www.cheapwholesaletickets.com/seatingcharts/dicks_sporting_goods_park-field_ga-seating-chart.gif",
     },
   ],

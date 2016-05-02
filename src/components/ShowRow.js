@@ -1,4 +1,4 @@
-import React, { ListView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import React, { Image, ListView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 import ShowDetailView from '../containers/ShowDetailView';
 
 export default class ShowRow extends React.Component {
@@ -19,22 +19,29 @@ export default class ShowRow extends React.Component {
   }
 
   renderShow(show, sectionID, rowID) {
-    const style = [
-      styles.row,
-      {backgroundColor: colors[rowID % colors.length]}
-    ];
+    // const style = [
+    //   styles.row,
+    //   {backgroundColor: colors[rowID % colors.length]}
+    // ];
+
+    const venueID = show.venueID;
 
     return (
       <TouchableOpacity onPress={() => this.chooseShow(rowID)}>
-        <View style={style}>
-          <View style={styles.dateContainer}>
-            <Text style={styles.date}>{show.slashDate}</Text>
+        <Image
+          source={{uri: this.props.venueData[venueID].photos[0]}}
+          style={styles.backgroundPhoto}
+        >
+          <View style={styles.row}>
+            <View style={styles.dateContainer}>
+              <Text style={styles.date}>{show.slashDate}</Text>
+            </View>
+            <View style={styles.venueLocationContainer}>
+              <Text style={styles.venue}>{show.venue} </Text>
+              <Text style={styles.location}>{show.city}, {show.state}</Text>
+            </View>
           </View>
-          <View style={styles.venueLocationContainer}>
-            <Text style={styles.venue}>{show.venue} </Text>
-            <Text style={styles.location}>{show.city}, {show.state}</Text>
-          </View>
-        </View>
+        </Image>
       </TouchableOpacity>
     )
   }
@@ -50,28 +57,42 @@ export default class ShowRow extends React.Component {
   }
 }
 
-const colors = ['ivory', 'floralwhite'];
+// const colors = ['ivory', 'floralwhite'];
 
 const styles = StyleSheet.create({
   row: {
-    padding: 10,
-    flexDirection: 'row'
+    padding: 20,
+    flexDirection: 'row',
+    height: 120
+  },
+  backgroundPhoto: {
+    flex: 1,
+    marginTop: 3,
+    marginBottom: 3,
   },
   dateContainer: {
-    width: 70
+    width: 60
   },
   date: {
     textAlign: 'left',
-    color: 'darkslategrey',
+    color: 'white',
     fontSize: 20,
-    fontWeight: '500'
+    fontWeight: '600',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 2, height: 1}
   },
   venue: {
-    fontSize: 20,
-    color: 'darkslategrey',
-    fontWeight: '500'
+    fontSize: 22,
+    color: 'white',
+    fontWeight: '600',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 2, height: 1}
   },
   location: {
-    color: 'darkslategrey',
+    fontSize: 16,
+    color: 'white',
+    fontWeight: '400',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 2, height: 1}
   }
 });
