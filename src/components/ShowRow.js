@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   row: {
     padding: 20,
     flexDirection: 'row',
+    height: 120
   },
   backgroundPhoto: {
     flex: 1,
@@ -78,19 +79,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '600',
     textShadowColor: 'black',
-    textShadowOffset: {width: 1, height: 1}
+    textShadowOffset: {width: 2, height: 1}
   },
   venue: {
     fontSize: 22,
     color: 'white',
     fontWeight: '600',
     textShadowColor: 'black',
-    textShadowOffset: {width: 1, height: 1}
+    textShadowOffset: {width: 2, height: 1}
   },
   location: {
+    fontSize: 16,
     color: 'white',
     fontWeight: '400',
     textShadowColor: 'black',
-    textShadowOffset: {width: 1, height: 1}
+    textShadowOffset: {width: 2, height: 1}
   }
 });
