@@ -14,6 +14,7 @@ export default class WebBrowser extends React.Component {
     return (
       <WebView
         source={{uri: cotURL}}
+        startInLoadingState={true}
       />
     );
   }
