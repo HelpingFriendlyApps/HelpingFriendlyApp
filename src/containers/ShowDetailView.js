@@ -5,6 +5,7 @@ import * as TabBarActions from '../actions/tabBar';
 import MapTab from './MapTab';
 import DetailsTab from './DetailsTab';
 import TicketsTab from './TicketsTab';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
@@ -34,36 +35,38 @@ export class ShowDetailView extends React.Component {
           style={styles.tabBar}
           selectedTab={this.props.tour.selectedTab}
         >
-          <TabBarIOS.Item
-            systemIcon="history"
-            onPress={() => this.changeTab('map')}
-            selected={this.props.tour.selectedTab === 'map'}
+          <Icon.TabBarItemIOS
+            iconName={'info'}
+            title={'Info'}
+            onPress={() => this.changeTab('details')}
+            selected={this.props.tour.selectedTab === 'details'}
           >
             <DetailsTab
               data={this.props.data}
-              toRoute={this.props.toRoute}
             />
-          </TabBarIOS.Item>
+          </Icon.TabBarItemIOS>
 
-          <TabBarIOS.Item
-            systemIcon="favorites"
-            onPress={() => this.changeTab('images')}
-            selected={this.props.tour.selectedTab === 'images'}
+          <Icon.TabBarItemIOS
+            iconName={'map-marker'}
+            title={'Map'}
+            onPress={() => this.changeTab('map')}
+            selected={this.props.tour.selectedTab === 'map'}
           >
             <MapTab
               data={this.props.data}
             />
-          </TabBarIOS.Item>
+          </Icon.TabBarItemIOS>
 
-          <TabBarIOS.Item
-            systemIcon="contacts"
-            onPress={() => this.changeTab('contacts')}
-            selected={this.props.tour.selectedTab === 'contacts'}
+          <Icon.TabBarItemIOS
+            iconName={'ticket'}
+            title={'Tickets'}
+            onPress={() => this.changeTab('tickets')}
+            selected={this.props.tour.selectedTab === 'tickets'}
           >
             <TicketsTab
               data={this.props.data.showData}
             />
-          </TabBarIOS.Item>
+          </Icon.TabBarItemIOS>
         </TabBarIOS>
       </View>
     );

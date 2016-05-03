@@ -21,7 +21,6 @@ export default class App extends React.Component {
         firstRoute={firstRoute}
         headerStyle={styles.header}
         backButtonComponent={BackButton}
-        backButtonProps={{previousScreen: "Summer 2016"}}
       />
     );
   }
