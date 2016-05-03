@@ -1,20 +1,10 @@
-import React, { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
+import React, { Image, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
 import TimeBox from '../components/TimeBox';
-import WebBrowser from '../components/WebBrowser';
 
 export default class DetailsTab extends React.Component {
   constructor(props) {
     super(props);
-    this.displayBrowser = this.displayBrowser.bind(this);
-  }
-
-  displayBrowser() {
-    this.props.toRoute({
-      name: 'Cash or Trade',
-      component: WebBrowser,
-      data: this.props.data.showData
-    });
   }
 
   render() {
@@ -68,13 +58,6 @@ export default class DetailsTab extends React.Component {
               time={data.showTime}
             />
           </View>
-        <View style={styles.cotButtonContainer}>
-          <TouchableOpacity onPress={this.displayBrowser}>
-            <View style={styles.cotButton}>
-              <Text>Cash or Trade</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
       </View>
     );
   }
@@ -111,19 +94,5 @@ const styles = StyleSheet.create({
   basicInfoContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between'
-  },
-  cotButtonContainer: {
-    alignItems: 'center',
-    margin: 40
-  },
-  cotButton: {
-    height: 60,
-    width: 160,
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    borderColor: 'darkslategrey',
-    alignItems: 'center',
-    justifyContent: 'center'
   },
 });
