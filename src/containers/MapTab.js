@@ -27,9 +27,9 @@ export default class MapTab extends React.Component {
         </View>
         <View style={styles.bottomContainer}>
           <Text style={styles.topThree}>Top 3 Things to Do in {data.city}</Text>
-          <Text>1. Collect underpants</Text>
-          <Text>2. ?</Text>
-          <Text>3. Profit</Text>
+          <Text>{data.thingsToDo[1].name}</Text>
+          <Text>{data.thingsToDo[2].name}</Text>
+          <Text>{data.thingsToDo[3].name}</Text>
         </View>
       </View>
     );
