@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
 import MapTab from './MapTab';
 import DetailsTab from './DetailsTab';
-import HistoryTab from './HistoryTab';
+import TicketsTab from './TicketsTab';
 
 const mapStateToProps = (state) => ({
   tour: state.tour
@@ -60,9 +60,8 @@ export class ShowDetailView extends React.Component {
             onPress={() => this.changeTab('contacts')}
             selected={this.props.tour.selectedTab === 'contacts'}
           >
-            <HistoryTab
-              showID={this.props.tour.selectedShowID}
-              showData={this.props.tour.shows[this.props.tour.selectedShowID]}
+            <TicketsTab
+              data={this.props.data.showData}
             />
           </TabBarIOS.Item>
         </TabBarIOS>
