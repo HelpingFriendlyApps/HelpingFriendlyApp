@@ -1,5 +1,6 @@
 import React, { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
+import TimeBox from '../components/TimeBox';
 import WebBrowser from '../components/WebBrowser';
 
 export default class DetailsTab extends React.Component {
@@ -54,15 +55,19 @@ export default class DetailsTab extends React.Component {
           </Carousel>
         </View>
           <View style={styles.basicInfoContainer}>
-            <View style={styles.timeContainer}>
-              <Text style={styles.bold}>Show Time: </Text>
-              <Text style={styles.bold}>Doors Open: </Text>
-            </View>
-            <View style={styles.locationContainer}>
-              <Text style={styles.bold}>{data.showTime} {data.timeZone}</Text>
-              <Text style={styles.bold}>{data.doorTime}</Text>
-            </View>
-        </View>
+            <TimeBox
+              text={'Lot'}
+              time={data.lotTime}
+            />
+            <TimeBox
+              text={'Doors'}
+              time={data.doorTime}
+            />
+            <TimeBox
+              text={'Show'}
+              time={data.showTime}
+            />
+          </View>
         <View style={styles.cotButtonContainer}>
           <TouchableOpacity onPress={this.displayBrowser}>
             <View style={styles.cotButton}>
@@ -93,7 +98,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     letterSpacing: 1,
     color: 'darkslategrey',
-    fontWeight: '500',
+    fontWeight: '600',
+    textAlign: 'center'
   },
   bold: {
     fontWeight: '600',
@@ -104,7 +110,7 @@ const styles = StyleSheet.create({
   },
   basicInfoContainer: {
     flexDirection: 'row',
-    // alignItems: 'center'
+    justifyContent: 'space-between'
   },
   cotButtonContainer: {
     alignItems: 'center',
