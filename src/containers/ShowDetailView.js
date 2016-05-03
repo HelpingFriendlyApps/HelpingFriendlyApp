@@ -36,8 +36,8 @@ export class ShowDetailView extends React.Component {
         >
           <TabBarIOS.Item
             systemIcon="history"
-            onPress={() => this.changeTab('map')}
-            selected={this.props.tour.selectedTab === 'map'}
+            onPress={() => this.changeTab('details')}
+            selected={this.props.tour.selectedTab === 'details'}
           >
             <DetailsTab
               data={this.props.data}
@@ -47,8 +47,8 @@ export class ShowDetailView extends React.Component {
 
           <TabBarIOS.Item
             systemIcon="favorites"
-            onPress={() => this.changeTab('images')}
-            selected={this.props.tour.selectedTab === 'images'}
+            onPress={() => this.changeTab('map')}
+            selected={this.props.tour.selectedTab === 'map'}
           >
             <MapTab
               data={this.props.data}
@@ -57,8 +57,8 @@ export class ShowDetailView extends React.Component {
 
           <TabBarIOS.Item
             systemIcon="contacts"
-            onPress={() => this.changeTab('contacts')}
-            selected={this.props.tour.selectedTab === 'contacts'}
+            onPress={() => this.changeTab('tickets')}
+            selected={this.props.tour.selectedTab === 'tickets'}
           >
             <TicketsTab
               data={this.props.data.showData}

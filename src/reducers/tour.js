@@ -19,7 +19,7 @@ export default tour = (state = initialState, action) => {
 }
 
 const initialState = {
-  selectedTab: "map",
+  selectedTab: "details",
   selectedShowID: -1,
   shows: [
     {
