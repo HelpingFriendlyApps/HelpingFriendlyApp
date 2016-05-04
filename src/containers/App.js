@@ -28,6 +28,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'darkseagreen'
+    // backgroundColor: '#476369'
+    backgroundColor: 'darkslategrey'
   },
 });
