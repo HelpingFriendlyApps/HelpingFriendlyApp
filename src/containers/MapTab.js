@@ -24,15 +24,23 @@ export default class MapTab extends React.Component {
     const region = {
       latitude: data.latitude,
       longitude: data.longitude,
-      latitudeDelta: .01,
-      longitudeDelta: .01
+      latitudeDelta: .1,
+      longitudeDelta: .1
     };
-    const annotations = [{
+    let annotations = [{
       latitude: data.latitude,
       longitude: data.longitude,
       title: data.venue,
-      subtitle: `${data.address}, ${data.city}, ${data.state}`
+      subtitle: `${data.address}, ${data.city}, ${data.state}`,
     }];
+    const thingsToDo = data.thingsToDo.forEach(activity => {
+      annotations.push({
+        latitude: activity.latitude,
+        longitude: activity.longitude,
+        title: activity.name,
+        subtitle: `${activity.address}, ${activity.city}, ${activity.state}`,
+      })
+    });
 
     return (
       <View style={styles.container}>
@@ -51,6 +59,7 @@ export default class MapTab extends React.Component {
               sections={data.thingsToDo}
               renderHeader={this.renderHeader}
               renderContent={this.renderContent}
+              useTouchableOpacity={true}
             />
           </View>
         </View>
