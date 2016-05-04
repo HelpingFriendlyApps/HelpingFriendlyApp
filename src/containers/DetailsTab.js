@@ -1,6 +1,7 @@
 import React, { Image, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
 import TimeBox from '../components/TimeBox';
+import Separator from '../components/Separator';
 
 export default class DetailsTab extends React.Component {
   constructor(props) {
@@ -31,20 +32,21 @@ export default class DetailsTab extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.venue}>{data.venue}</Text>
+        <Separator />
         <View style={styles.carouselContainer}>
           <Carousel
-            width={340}
             indicatorSize={20}
             indicatorSpace={15}
             animate={false}
             indicatorOffset={5}
-            indicatorColor={'darkseagreen'}
+            indicatorColor={'darkslategrey'}
             inactiveIndicatorColor={'ivory'}
           >
             {photoCollection}
           </Carousel>
+        <Separator />
         </View>
-          <View style={styles.basicInfoContainer}>
+          <View style={styles.timesContainer}>
             <TimeBox
               text={'Lot'}
               time={data.lotTime}
@@ -70,11 +72,11 @@ const styles = StyleSheet.create({
   },
   carouselContainer: {
     // alignItems: 'center',
-    marginTop: 20,
+    // marginTop: 20,
     marginBottom: 20
   },
   photo: {
-    width: 335,
+    width: 400,
     height: 200,
   },
   venue: {
@@ -84,14 +86,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center'
   },
-  bold: {
-    fontWeight: '600',
-    flexDirection: 'row',
-    fontSize: 15,
-    paddingRight: 5,
-    color: 'darkslategrey'
-  },
-  basicInfoContainer: {
+  timesContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
