@@ -1,7 +1,24 @@
 import React, { MapView, StyleSheet, Text, View } from 'react-native';
+import Accordion from 'react-native-collapsible/Accordion';
 import Separator from '../components/Separator';
 
 export default class MapTab extends React.Component {
+  renderHeader(section) {
+    return (
+      <View>
+        <Text style={styles.activityName}>{section.name}</Text>
+      </View>
+    );
+  }
+
+  renderContent(section) {
+    return (
+      <View>
+        <Text style={styles.activityDescription}>{section.description}</Text>
+      </View>
+    );
+  }
+
   render() {
     const data = this.props.data.venueData;
     const region = {
@@ -28,10 +45,14 @@ export default class MapTab extends React.Component {
         </View>
         <Separator />
         <View style={styles.bottomContainer}>
-          <Text style={styles.topThree}>Top 3 Things to Do in {data.city}</Text>
-          <Text>{data.thingsToDo[1].name}</Text>
-          <Text>{data.thingsToDo[2].name}</Text>
-          <Text>{data.thingsToDo[3].name}</Text>
+          <Text style={styles.topThree}>What to Do in {data.city}</Text>
+          <View style={styles.accordion}>
+            <Accordion
+              sections={data.thingsToDo}
+              renderHeader={this.renderHeader}
+              renderContent={this.renderContent}
+            />
+          </View>
         </View>
       </View>
     );
@@ -54,6 +75,21 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'darkslategrey',
     fontWeight: '500',
-    paddingBottom: 10
-  }
+    paddingBottom: 10,
+  },
+  accordion: {
+    paddingLeft: 10
+  },
+  activityName: {
+    fontSize: 16,
+    // borderWidth: 1,
+    color: 'darkslategrey',
+    padding: 10
+  },
+  activityDescription: {
+    color: 'darkslategrey',
+    // borderWidth: 1,
+    // padding: 10,
+    marginLeft: 20
+  },
 });

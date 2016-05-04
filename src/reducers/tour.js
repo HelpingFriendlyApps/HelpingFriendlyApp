@@ -330,8 +330,8 @@ const initialState = {
       "timeZone": "CT",
       "photos": ["http://www.levyrestaurants.com/images/xcel-energy-center/xcel_header.jpg", "http://finance-commerce.com/files/2014/04/Xcel6.jpg"],
       "seatingChart": "http://i.imgur.com/mzlkCcS.png",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -344,7 +344,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -357,7 +357,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -370,7 +370,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 1,
@@ -389,8 +389,8 @@ const initialState = {
       "timeZone": "CT",
       "photos": ["http://www.levyrestaurants.com/images/wrigley-field/wrigley-day-040512-sg-01-jpg.JPG", "http://media.bizj.us/view/img/2740011/13645538345b53b1b7b62o*750xx5184-2922-0-0.jpg"],
       "seatingChart": "https://www.gotickets.com/cached/_images/maintainwidth/521x500/3289d6466a2cd8483042263f956c9f7d/wrigley-field-concert-4754.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -403,7 +403,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -416,7 +416,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -429,7 +429,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 2,
@@ -448,8 +448,8 @@ const initialState = {
       "timeZone": "CT",
       "photos": ["https://media-cdn.tripadvisor.com/media/photo-s/07/ac/21/c5/the-lawn-at-klipsch-music.jpg", "http://e994010f48279d85b5d7-a0bc3fbf1884fc0965506ae2b946e1cd.r57.cf2.rackcdn.com/herobox-images/_2000xAUTO_fit_center-center_80/Klipsch-Music-Center-v01-2001x1125.jpg"],
       "seatingChart": "http://intl.ticketseating.com/maps/450w/2167-klipsch-music-center-end-stage.jpg",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -462,7 +462,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -475,7 +475,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -488,7 +488,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 3,
@@ -507,8 +507,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://www.beamltd.com/wp-content/uploads/2013/10/mann-center_Halkin-main-stage.jpg", "https://c7.staticflickr.com/5/4139/4821882342_d85847a22e_b.jpg", "http://www.uwishunu.com/wp-content/uploads/2014/07/The-Philadelphia-Orchestra-The-Mann-680uw.jpg"],
       "seatingChart": "http://www.manncenter.org/sites/all/modules/mann_seating/images/Mann-Seating-Chart-2013.png",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -521,7 +521,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -534,7 +534,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -547,7 +547,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 4,
@@ -566,8 +566,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://discoversaratoga.org/wp-content/uploads/2015/01/spac-at-dusk-1200x800.jpg", "http://onlinephishtour.com/wp-content/uploads/2011/04/spac10.jpg", "http://1.bp.blogspot.com/-XMSfF1FeSLo/UdrRwn-_HSI/AAAAAAAABbk/y1jFrntEiNY/s1600/1063822_10151448849506290_1834474559_o.jpg", "http://wac.450f.edgecastcdn.net/80450F/wgna.com/files/2012/02/SPAC-Flicker-User-Smantha-Decker-630x376.jpg"],
       "seatingChart": "http://luck.s3.amazonaws.com/venue/135.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -580,7 +580,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -593,7 +593,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -606,7 +606,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 5,
@@ -625,8 +625,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://static.bangordailynews.com/wp-content/uploads/2014/12/10038601_H14177325-600x405.jpeg", "http://www.roamingtherinks.com/photos/crossinsurancearenaoutside%20(700x393).jpg"],
       "seatingChart": "http://www.crossarenaportland.com/images/seatingcharts/full/ln42r.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -639,7 +639,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -652,7 +652,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -665,7 +665,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 6,
@@ -684,8 +684,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://dmbalmanac.com/venuetdd/1373.jpg", "http://1.bp.blogspot.com/-441h6zBvc-0/U7QZsrLjBhI/AAAAAAAABp8/mAJVWidLS88/s1600/10421275_10100179212788344_8621021184398358444_n.jpg"],
       "seatingChart": "http://seatingchartview.com/wp-content/uploads/2013/07/Comcast-Center-Seating-Chart.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -698,7 +698,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -711,7 +711,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -724,7 +724,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 7,
@@ -743,8 +743,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://i46.tinypic.com/2a5gn77.jpg", "https://rpw215.files.wordpress.com/2015/04/comcasttheatre.jpg"],
       "seatingChart": "http://seatingchartview.com/wp-content/uploads/2014/05/XFINITY-Theatre-Seating-Chart.png",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -757,7 +757,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -770,7 +770,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -783,7 +783,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 8,
@@ -802,8 +802,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://venuestoday.s3.amazonaws.com/img/lakeview600.jpg", "http://media.syracuse.com/news/photo/2015/08/03/amphitheaterjpg-d6eed28602a05d4f.jpg"],
       "seatingChart": "http://lakeviewamphitheatre.com/wp-content/uploads/2015/08/Seating8276889.jpg",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -816,7 +816,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -829,7 +829,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -842,7 +842,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 9,
@@ -861,8 +861,8 @@ const initialState = {
       "timeZone": "PT",
       "photos": ["http://www.georgeamphitheatre.com/wp-content/uploads/2015/05/sasquatch-featured.png", "http://www.georgeamphitheatre.com/wp-content/uploads/2012/04/the-gorge.jpg", "http://www.livenationpremiumseats.com/images/1440/620/400/image.jpg", "http://static1.squarespace.com/static/56971a1bfd5d08f1247677c4/56972f743b0be3f9ce884250/56972f798b38d4f1427f1d33/1452748669720/index--element91+(1).jpg"],
       "seatingChart": "http://d2o50i5c2dr30a.cloudfront.net/2658cbdb-7dd0-40b4-a798-e1a5014b4382.jpg",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -875,7 +875,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -888,7 +888,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -901,7 +901,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 10,
@@ -920,8 +920,8 @@ const initialState = {
       "timeZone": "PT",
       "photos": ["http://www.adaconcertvenues.com/wp-content/uploads/2015/12/Bill_Graham_Civic.jpg", "http://res.cloudinary.com/dostuff-media/image/upload//c_fill,g_faces,h_315,w_600/v1420677100/venue-16924.jpg", "http://i0.wp.com/livemusicblog.com/wp-content/uploads/2014/10/Phish-19.jpg?resize=395%2C264"],
       "seatingChart": "http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nca/39229s_a.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -934,7 +934,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -947,7 +947,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -960,7 +960,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 11,
@@ -979,8 +979,8 @@ const initialState = {
       "timeZone": "PT",
       "photos": ["https://static.rukkus.com/venue/images/The_Forum-1399.jpg", "http://www.lapropoint.com/wp-content/uploads/2014/02/Bowl-RT-665x300.jpg"],
       "seatingChart": "https://www.barrystickets.com/losangeles/forum/charts/phish-forumseating.jpg",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -993,7 +993,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -1006,7 +1006,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -1019,7 +1019,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 12,
@@ -1038,8 +1038,8 @@ const initialState = {
       "timeZone": "PT",
       "photos": ["http://seatingchartview.com/wp-content/uploads/2014/03/Sleep-Train-Amphitheatre-Chula-Vista.jpg", "http://www.sacbee.com/entertainment/458c03/picture12051371/ALTERNATES/LANDSCAPE_1140/RB%20Sleep%20Train%20Stage.JPG"],
       "seatingChart": "http://s1.ticketm.net/ln/en-us/tmimages/venue/maps/wes/32420s.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -1050,9 +1050,9 @@ const initialState = {
           "url": "http://www.gotablank.space",
           "price": 0,
           "proTip": "Don't forget to bring a towel!",
-          "description": "This place has good beer",
+          "description": "Pokem ipsum dolor sit amet Krokorok Drifblim Unown Calcium Cresselia quis nostrud exercitation. Ash Monferno Xatu Soda Pop Ledyba Honchkrow Trubbish. Earthquake Trapinch Palkia Bulbasaur Seadra Chingling Normal. Splash Solosis Dig Dusknoir Simisear Grumpig Seadra. Velit esse cillum dolore eu fugiat nulla pariatur Victreebel Pelipper Water Kricketot Blizzard Badge. ",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -1063,9 +1063,9 @@ const initialState = {
           "url": "http://www.gotablank.space",
           "price": 0,
           "proTip": "Don't forget to bring a towel!",
-          "description": "This is a park with trees",
+          "description": "Bacon ipsum dolor amet prosciutto turkey chicken shank swine. Drumstick pork loin short loin strip steak t-bone ham kevin pastrami bacon. Fatback landjaeger andouille leberkas ground round pork picanha chuck flank turkey ham hock strip steak tongue. Alcatra flank biltong pork chop bresaola, shank swine beef ribs pig filet mignon pastrami landjaeger ground round hamburger t-bone. Swine cow biltong venison. Boudin pancetta swine porchetta.",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -1076,9 +1076,9 @@ const initialState = {
           "url": "http://www.gotablank.space",
           "price": 0,
           "proTip": "Don't forget to bring a towel!",
-          "description": "Yummy eats",
+          "description": "And even if he's a lazy man, and the Dude was certainly that—quite possibly the laziest in Los Angeles County. I don't see any connection to Vietnam, Walter. He lives in North Hollywood on Radford, near the In-and-Out Burger.",
         },
-      },
+      ],
     },
     {
       "id": 13,
@@ -1097,8 +1097,8 @@ const initialState = {
       "timeZone": "ET",
       "photos": ["http://40.media.tumblr.com/23eb1f23ec6d3214dca8a6541066beb6/tumblr_mstanxfg6V1sdg8qgo3_1280.jpg", "http://musichord.com/wp-content/uploads/2014/09/Triangle-Stage.jpg"],
       "seatingChart": "",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -1111,7 +1111,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -1124,7 +1124,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -1137,7 +1137,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
     {
       "id": 14,
@@ -1156,8 +1156,8 @@ const initialState = {
       "timeZone": "MT",
       "photos": ["http://www.turnerconstruction.com/Files/ProjectImage?url=%2Fsites%2Fmarketingstories%2FMarketing%20Story%20Images%2Foriginal.d0ef2cb1-761d-4b23-8904-16029412f241.jpg&width=707&height=470&crop=True&jpegQuality=95", "https://tackleandlines.files.wordpress.com/2013/01/564311_10150999996291290_407443937_n.jpg"],
       "seatingChart": "http://www.cheapwholesaletickets.com/seatingcharts/dicks_sporting_goods_park-field_ga-seating-chart.gif",
-      "thingsToDo": {
-        1: {
+      "thingsToDo": [
+        {
           "name": "Sick Brewery",
           "category": "brewery",
           "address": "123 Main St",
@@ -1170,7 +1170,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This place has good beer",
         },
-        2: {
+        {
           "name": "Sweet Park",
           "category": "outdoors",
           "address": "456 Main St",
@@ -1183,7 +1183,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "This is a park with trees",
         },
-        3: {
+        {
           "name": "Food Co. Inc",
           "category": "restaurant",
           "address": "789 Main St",
@@ -1196,7 +1196,7 @@ const initialState = {
           "proTip": "Don't forget to bring a towel!",
           "description": "Yummy eats",
         },
-      },
+      ],
     },
   ],
 };
