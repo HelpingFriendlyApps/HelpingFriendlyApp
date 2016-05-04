@@ -1,5 +1,4 @@
-import React, { StyleSheet, View } from 'react-native';
-import Counter from './Counter';
+import React, { StyleSheet } from 'react-native';
 import ShowListView from './ShowListView';
 import ShowDetailView from './ShowDetailView';
 import Router from 'react-native-simple-router';
@@ -11,10 +10,6 @@ const firstRoute = {
 };
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Router
@@ -28,7 +23,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   header: {
-    // backgroundColor: '#476369'
     backgroundColor: 'darkslategrey'
   },
 });

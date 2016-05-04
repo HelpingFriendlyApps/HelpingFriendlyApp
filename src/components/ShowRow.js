@@ -1,4 +1,4 @@
-import React, { Image, ListView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import React, { Image, ListView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ShowDetailView from '../containers/ShowDetailView';
 
 export default class ShowRow extends React.Component {
@@ -19,11 +19,6 @@ export default class ShowRow extends React.Component {
   }
 
   renderShow(show, sectionID, rowID) {
-    // const style = [
-    //   styles.row,
-    //   {backgroundColor: colors[rowID % colors.length]}
-    // ];
-
     const venueID = show.venueID;
 
     return (
@@ -56,8 +51,6 @@ export default class ShowRow extends React.Component {
     );
   }
 }
-
-// const colors = ['ivory', 'floralwhite'];
 
 const styles = StyleSheet.create({
   row: {

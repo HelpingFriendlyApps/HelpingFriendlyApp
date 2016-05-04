@@ -82,14 +82,11 @@ const styles = StyleSheet.create({
   },
   activityName: {
     fontSize: 16,
-    // borderWidth: 1,
     color: 'darkslategrey',
     padding: 10
   },
   activityDescription: {
     color: 'darkslategrey',
-    // borderWidth: 1,
-    // padding: 10,
     marginLeft: 20
   },
 });
