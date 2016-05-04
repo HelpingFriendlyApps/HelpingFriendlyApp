@@ -30,7 +30,7 @@ export class ShowDetailView extends React.Component {
     return (
       <View style={styles.pageContainer}>
         <TabBarIOS
-          tintColor="darkseagreen"
+          tintColor="darkslategrey"
           barTintColor="ivory"
           style={styles.tabBar}
           selectedTab={this.props.tour.selectedTab}

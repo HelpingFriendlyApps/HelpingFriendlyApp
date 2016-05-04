@@ -1,4 +1,5 @@
 import React, { MapView, StyleSheet, Text, View } from 'react-native';
+import Separator from '../components/Separator';
 
 export default class MapTab extends React.Component {
   render() {
@@ -25,6 +26,7 @@ export default class MapTab extends React.Component {
             annotations={annotations}
           />
         </View>
+        <Separator />
         <View style={styles.bottomContainer}>
           <Text style={styles.topThree}>Top 3 Things to Do in {data.city}</Text>
           <Text>{data.thingsToDo[1].name}</Text>
@@ -42,7 +44,6 @@ const styles = StyleSheet.create({
   },
   mapContainer: {
     alignItems: 'center',
-    paddingBottom: 40
   },
   map: {
     height: 200,
