@@ -41,6 +41,7 @@ export default class DetailsTab extends React.Component {
             indicatorOffset={5}
             indicatorColor={'darkslategrey'}
             inactiveIndicatorColor={'ivory'}
+            width={335}
           >
             {photoCollection}
           </Carousel>
@@ -67,13 +68,13 @@ export default class DetailsTab extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    margin: 20,
   },
   carouselContainer: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   photo: {
-    width: 400,
+    width: 335,
     height: 200,
   },
   venue: {
@@ -85,6 +86,6 @@ const styles = StyleSheet.create({
   },
   timesContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 });
