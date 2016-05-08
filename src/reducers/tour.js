@@ -328,7 +328,7 @@ const initialState = {
       "doorTime": "6:30pm",
       "lotTime": "n/a",
       "timeZone": "CT",
-      "photos": ["http://www.levyrestaurants.com/images/xcel-energy-center/xcel_header.jpg", "http://finance-commerce.com/files/2014/04/Xcel6.jpg"],
+      "photos": ["http://i.imgur.com/fExsDqE.jpg", "http://imgur.com/G0PJiKE.jpg"],
       "seatingChart": "http://i.imgur.com/mzlkCcS.png",
       "thingsToDo": [
         {
@@ -387,8 +387,8 @@ const initialState = {
       "doorTime": "5:00pm",
       "lotTime": "n/a",
       "timeZone": "CT",
-      "photos": ["http://www.levyrestaurants.com/images/wrigley-field/wrigley-day-040512-sg-01-jpg.JPG", "http://media.bizj.us/view/img/2740011/13645538345b53b1b7b62o*750xx5184-2922-0-0.jpg"],
-      "seatingChart": "https://www.gotickets.com/cached/_images/maintainwidth/521x500/3289d6466a2cd8483042263f956c9f7d/wrigley-field-concert-4754.gif",
+      "photos": ["http://imgur.com/B1xzxTo.jpg", "http://imgur.com/4pNUV4L.jpg"],
+      "seatingChart": "http://imgur.com/OOfO59J.jpg",
       "thingsToDo": [
         {
           "name": "Sick Brewery",
@@ -446,8 +446,8 @@ const initialState = {
       "doorTime": "6:00pm",
       "lotTime": "3:00pm",
       "timeZone": "CT",
-      "photos": ["https://media-cdn.tripadvisor.com/media/photo-s/07/ac/21/c5/the-lawn-at-klipsch-music.jpg", "http://e994010f48279d85b5d7-a0bc3fbf1884fc0965506ae2b946e1cd.r57.cf2.rackcdn.com/herobox-images/_2000xAUTO_fit_center-center_80/Klipsch-Music-Center-v01-2001x1125.jpg"],
-      "seatingChart": "http://intl.ticketseating.com/maps/450w/2167-klipsch-music-center-end-stage.jpg",
+      "photos": ["http://imgur.com/QCxAH0p.jpg", "http://imgur.com/KMfukij.jpg"],
+      "seatingChart": "http://imgur.com/qPvOgjX.jpg",
       "thingsToDo": [
         {
           "name": "Sick Brewery",
