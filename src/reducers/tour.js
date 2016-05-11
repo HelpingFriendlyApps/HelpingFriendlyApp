@@ -1,4 +1,4 @@
-import { CHANGE_TAB } from '../actions/tabBar';
+import { CHANGE_TAB, RESET_SELECTED_TAB } from '../actions/tabBar';
 import { SELECT_SHOW } from '../actions/showsList';
 
 export default tour = (state = initialState, action) => {
@@ -7,6 +7,11 @@ export default tour = (state = initialState, action) => {
       return {
         ...state,
         selectedTab: action.nextTab
+      }
+    case RESET_SELECTED_TAB:
+      return {
+        ...state,
+        selectedTab: "details"
       }
     case SELECT_SHOW:
       return {
