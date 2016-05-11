@@ -43,26 +43,25 @@ export default class DetailsTab extends React.Component {
           >
             {photoCollection}
           </Carousel>
-        <Separator />
         </View>
-      <View style={styles.container}>
-        <Text style={styles.venue}>{data.venue}</Text>
-        <Separator />
-          <View style={styles.timesContainer}>
-            <TimeBox
-              text={'Lot'}
-              time={data.lotTime}
-            />
-            <TimeBox
-              text={'Doors'}
-              time={data.doorTime}
-            />
-            <TimeBox
-              text={'Show'}
-              time={data.showTime}
-            />
-          </View>
-      </View>
+        <View style={styles.container}>
+          <Text style={styles.venue}>{data.venue}</Text>
+          <Separator />
+            <View style={styles.timesContainer}>
+              <TimeBox
+                text={'Lot'}
+                time={data.lotTime}
+              />
+              <TimeBox
+                text={'Doors'}
+                time={data.doorTime}
+              />
+              <TimeBox
+                text={'Show'}
+                time={data.showTime}
+              />
+            </View>
+        </View>
       </View>
     );
   }
@@ -73,9 +72,6 @@ const fullWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   container: {
     margin: 20,
-  },
-  carouselContainer: {
-    marginBottom: 20,
   },
   photo: {
     width: fullWidth,
