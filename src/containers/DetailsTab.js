@@ -1,4 +1,4 @@
-import React, { Image, StyleSheet, Text, View } from 'react-native';
+import React, { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
 import TimeBox from '../components/TimeBox';
 import Separator from '../components/Separator';
@@ -30,9 +30,7 @@ export default class DetailsTab extends React.Component {
      );
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.venue}>{data.venue}</Text>
-        <Separator />
+      <View>
         <View style={styles.carouselContainer}>
           <Carousel
             indicatorSize={20}
@@ -41,41 +39,43 @@ export default class DetailsTab extends React.Component {
             indicatorOffset={5}
             indicatorColor={'darkslategrey'}
             inactiveIndicatorColor={'ivory'}
-            width={335}
+            width={fullWidth}
           >
             {photoCollection}
           </Carousel>
-        <Separator />
         </View>
-          <View style={styles.timesContainer}>
-            <TimeBox
-              text={'Lot'}
-              time={data.lotTime}
-            />
-            <TimeBox
-              text={'Doors'}
-              time={data.doorTime}
-            />
-            <TimeBox
-              text={'Show'}
-              time={data.showTime}
-            />
-          </View>
+        <View style={styles.container}>
+          <Text style={styles.venue}>{data.venue}</Text>
+          <Separator />
+            <View style={styles.timesContainer}>
+              <TimeBox
+                text={'Lot'}
+                time={data.lotTime}
+              />
+              <TimeBox
+                text={'Doors'}
+                time={data.doorTime}
+              />
+              <TimeBox
+                text={'Show'}
+                time={data.showTime}
+              />
+            </View>
+        </View>
       </View>
     );
   }
 }
 
+const fullWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   container: {
     margin: 20,
   },
-  carouselContainer: {
-    marginBottom: 20,
-  },
   photo: {
-    width: 335,
-    height: 200,
+    width: fullWidth,
+    height: 220,
   },
   venue: {
     fontSize: 30,

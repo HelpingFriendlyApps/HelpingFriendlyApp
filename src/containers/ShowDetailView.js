@@ -20,6 +20,13 @@ export class ShowDetailView extends React.Component {
     super(props);
   }
 
+  componentWillReceiveProps() {
+    // TODO: This changes the default tab back to 'details' when clicking the back button like we expect, but it flashes to 'details' before fully going back to ShowListView
+    if (this.props.tour.selectedTab !== 'details') {
+      this.props.resetSelectedTab();
+    }
+  }
+
   changeTab(tappedTab) {
     if (this.props.tour.selectedTab !== tappedTab) {
       this.props.changeTab(tappedTab);
