@@ -1,4 +1,4 @@
-import React, { MapView, StyleSheet, Text, View } from 'react-native';
+import React, { MapView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import Separator from '../components/Separator';
 
@@ -43,7 +43,7 @@ export default class MapTab extends React.Component {
     });
 
     return (
-      <View style={styles.container}>
+      <View>
           <MapView
             style={styles.map}
             region={region}
@@ -51,15 +51,19 @@ export default class MapTab extends React.Component {
           />
         <Separator />
         <View style={styles.bottomContainer}>
-          <Text style={styles.topThree}>What to Do in {data.city}</Text>
-          <View style={styles.accordion}>
+          <Text style={styles.whatToDo}>What to Do in {data.city}</Text>
+          <ScrollView
+            style={styles.accordion}
+            bounces={false}
+            scrollsToTop={false}
+          >
             <Accordion
               sections={data.thingsToDo}
               renderHeader={this.renderHeader}
               renderContent={this.renderContent}
               useTouchableOpacity={true}
             />
-          </View>
+          </ScrollView>
         </View>
       </View>
     );
@@ -67,25 +71,22 @@ export default class MapTab extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    // padding: 20
-  },
   map: {
-    height: 200,
-    // width: 340,
+    height: 230,
     alignItems: 'center'
   },
   bottomContainer: {
-    padding: 20
+    paddingHorizontal: 20
   },
-  topThree: {
+  whatToDo: {
     fontSize: 20,
     color: 'darkslategrey',
     fontWeight: '500',
     paddingBottom: 10,
   },
   accordion: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    height: 240
   },
   activityName: {
     fontSize: 16,
