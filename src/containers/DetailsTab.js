@@ -1,4 +1,4 @@
-import React, { Image, StyleSheet, Text, View } from 'react-native';
+import React, { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
 import TimeBox from '../components/TimeBox';
 import Separator from '../components/Separator';
@@ -30,9 +30,7 @@ export default class DetailsTab extends React.Component {
      );
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.venue}>{data.venue}</Text>
-        <Separator />
+      <View>
         <View style={styles.carouselContainer}>
           <Carousel
             indicatorSize={20}
@@ -41,43 +39,43 @@ export default class DetailsTab extends React.Component {
             indicatorOffset={5}
             indicatorColor={'darkslategrey'}
             inactiveIndicatorColor={'ivory'}
+            width={fullWidth}
           >
             {photoCollection}
           </Carousel>
-        <Separator />
         </View>
-          <View style={styles.timesContainer}>
-            <TimeBox
-              text={'Lot'}
-              time={data.lotTime}
-            />
-            <TimeBox
-              text={'Doors'}
-              time={data.doorTime}
-            />
-            <TimeBox
-              text={'Show'}
-              time={data.showTime}
-            />
-          </View>
+        <View style={styles.container}>
+          <Text style={styles.venue}>{data.venue}</Text>
+          <Separator />
+            <View style={styles.timesContainer}>
+              <TimeBox
+                text={'Lot'}
+                time={data.lotTime}
+              />
+              <TimeBox
+                text={'Doors'}
+                time={data.doorTime}
+              />
+              <TimeBox
+                text={'Show'}
+                time={data.showTime}
+              />
+            </View>
+        </View>
       </View>
     );
   }
 }
 
+const fullWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    // alignItems: 'center'
-  },
-  carouselContainer: {
-    // alignItems: 'center',
-    // marginTop: 20,
-    marginBottom: 20
+    margin: 20,
   },
   photo: {
-    width: 400,
-    height: 200,
+    width: fullWidth,
+    height: 220,
   },
   venue: {
     fontSize: 30,
@@ -88,6 +86,6 @@ const styles = StyleSheet.create({
   },
   timesContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 });

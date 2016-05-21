@@ -31,7 +31,11 @@
    * on the same Wi-Fi network.
    */
 
+  // Uncomment to run on computer
   jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
+
+  // Uncomment to run on local device (enter your IP)
+  // jsCodeLocation = [NSURL URLWithString:@"http://[your IP here]:8081/index.ios.bundle?platform=ios&dev=true"];
 
   /**
    * OPTION 2

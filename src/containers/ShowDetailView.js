@@ -1,4 +1,4 @@
-import React, { Image, MapView, StyleSheet, TabBarIOS, Text, View } from 'react-native';
+import React, { StyleSheet, TabBarIOS, View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
@@ -18,6 +18,12 @@ const mapDispatchToProps = (dispatch) => {
 export class ShowDetailView extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentWillUnmount() {
+    if (this.props.tour.selectedTab !== 'details') {
+      this.props.resetSelectedTab();
+    }
   }
 
   changeTab(tappedTab) {
