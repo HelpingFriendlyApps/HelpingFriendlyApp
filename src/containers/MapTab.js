@@ -44,13 +44,11 @@ export default class MapTab extends React.Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.mapContainer}>
           <MapView
             style={styles.map}
             region={region}
             annotations={annotations}
           />
-        </View>
         <Separator />
         <View style={styles.bottomContainer}>
           <Text style={styles.topThree}>What to Do in {data.city}</Text>
@@ -70,15 +68,15 @@ export default class MapTab extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20
-  },
-  mapContainer: {
-    alignItems: 'center',
+    // padding: 20
   },
   map: {
     height: 200,
-    width: 340,
+    // width: 340,
     alignItems: 'center'
+  },
+  bottomContainer: {
+    padding: 20
   },
   topThree: {
     fontSize: 20,
