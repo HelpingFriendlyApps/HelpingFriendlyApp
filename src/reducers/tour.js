@@ -549,7 +549,7 @@ const initialState = {
         {
           "name": "Lake George",
           "category": "outdoors",
-          "address": "123 Main St",
+          "address": "139 Beach Rd",
           "city": "Lake George",
           "state": "NY",
           "latitude": 43.436333,
@@ -746,11 +746,11 @@ const initialState = {
         {
           "name": "Dinosaur Bar-B-Que",
           "category": "restaurant",
-          "address": "123 Main St",
+          "address": "246 W Willow St",
           "city": "Syracuse",
           "state": "NY",
-          "latitude": ,
-          "longitude": ,
+          "latitude": 43.052572,
+          "longitude": -76.154662,
           "url": "http://www.dinosaurbarbque.com/bbq-syracuse",
           "price": 2,
           "proTip": "",
