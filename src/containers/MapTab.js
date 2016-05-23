@@ -61,7 +61,7 @@ export default class MapTab extends React.Component {
               sections={data.thingsToDo}
               renderHeader={this.renderHeader}
               renderContent={this.renderContent}
-              useTouchableOpacity={true}
+              underlayColor={'transparent'}
             />
           </ScrollView>
         </View>
