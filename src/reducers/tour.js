@@ -757,7 +757,7 @@ const initialState = {
           "description": "Syracuse is the original location for this growing BBQ chain. Great BBQ and sides, dozens of beers on tap (including pitchers and buckets), live music, outdoors seating -- what more do you want?",
         },
         {
-          "name": "Explore the Finger Lakes,
+          "name": "Explore the Finger Lakes",
           "category": "outdoors",
           "address": "2790 County Route 16",
           "city": "Watkins Glen",
