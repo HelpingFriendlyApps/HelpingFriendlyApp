@@ -1,4 +1,4 @@
-import React, { MapView, StyleSheet, Text, View } from 'react-native';
+import React, { MapView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import Separator from '../components/Separator';
 
@@ -24,35 +24,46 @@ export default class MapTab extends React.Component {
     const region = {
       latitude: data.latitude,
       longitude: data.longitude,
-      latitudeDelta: .01,
-      longitudeDelta: .01
+      latitudeDelta: .1,
+      longitudeDelta: .1
     };
-    const annotations = [{
+    let annotations = [{
       latitude: data.latitude,
       longitude: data.longitude,
       title: data.venue,
-      subtitle: `${data.address}, ${data.city}, ${data.state}`
+      subtitle: `${data.address}, ${data.city}, ${data.state}`,
     }];
+    const thingsToDo = data.thingsToDo.forEach(activity => {
+      annotations.push({
+        latitude: activity.latitude,
+        longitude: activity.longitude,
+        title: activity.name,
+        subtitle: `${activity.address}, ${activity.city}, ${activity.state}`,
+      })
+    });
 
     return (
-      <View style={styles.container}>
-        <View style={styles.mapContainer}>
+      <View>
           <MapView
             style={styles.map}
             region={region}
             annotations={annotations}
           />
-        </View>
         <Separator />
         <View style={styles.bottomContainer}>
-          <Text style={styles.topThree}>What to Do in {data.city}</Text>
-          <View style={styles.accordion}>
+          <Text style={styles.whatToDo}>What to Do in {data.city}</Text>
+          <ScrollView
+            style={styles.accordion}
+            bounces={false}
+            scrollsToTop={false}
+          >
             <Accordion
               sections={data.thingsToDo}
               renderHeader={this.renderHeader}
               renderContent={this.renderContent}
+              useTouchableOpacity={true}
             />
-          </View>
+          </ScrollView>
         </View>
       </View>
     );
@@ -60,25 +71,22 @@ export default class MapTab extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 20
-  },
-  mapContainer: {
-    alignItems: 'center',
-  },
   map: {
-    height: 200,
-    width: 340,
+    height: 230,
     alignItems: 'center'
   },
-  topThree: {
+  bottomContainer: {
+    paddingHorizontal: 20
+  },
+  whatToDo: {
     fontSize: 20,
     color: 'darkslategrey',
     fontWeight: '500',
     paddingBottom: 10,
   },
   accordion: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    height: 240
   },
   activityName: {
     fontSize: 16,
