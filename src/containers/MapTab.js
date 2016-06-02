@@ -11,10 +11,12 @@ export default class MapTab extends React.Component {
     );
   }
 
-  renderContent(section) {
+  renderContent(content) {
     return (
       <View>
-        <Text style={styles.activityDescription}>{section.description}</Text>
+        <Text style={styles.activityDescription}>
+          {content.description}
+        </Text>
       </View>
     );
   }
@@ -31,24 +33,24 @@ export default class MapTab extends React.Component {
       latitude: data.latitude,
       longitude: data.longitude,
       title: data.venue,
-      subtitle: `${data.address}, ${data.city}, ${data.state}`,
+      subtitle: `${data.address}, ${data.city}, ${data.state}`
     }];
     const thingsToDo = data.thingsToDo.forEach(activity => {
       annotations.push({
         latitude: activity.latitude,
         longitude: activity.longitude,
         title: activity.name,
-        subtitle: `${activity.address}, ${activity.city}, ${activity.state}`,
+        subtitle: `${activity.address}, ${activity.city}, ${activity.state}`
       })
     });
 
     return (
       <View>
-          <MapView
-            style={styles.map}
-            region={region}
-            annotations={annotations}
-          />
+        <MapView
+          style={styles.map}
+          region={region}
+          annotations={annotations}
+        />
         <Separator />
         <View style={styles.bottomContainer}>
           <Text style={styles.whatToDo}>What to Do in {data.city}</Text>
