@@ -11,7 +11,7 @@ export default tour = (state = initialState, action) => {
     case RESET_SELECTED_TAB:
       return {
         ...state,
-        selectedTab: "details"
+        selectedTab: "Details"
       }
     case SELECT_SHOW:
       return {
@@ -24,7 +24,7 @@ export default tour = (state = initialState, action) => {
 }
 
 const initialState = {
-  selectedTab: "details",
+  selectedTab: "Details",
   selectedShowID: -1,
   shows: [
     {

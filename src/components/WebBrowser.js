@@ -2,7 +2,7 @@ import React, { WebView } from 'react-native';
 
 export default class WebBrowser extends React.Component {
   render() {
-    const data = this.props.data;
+    const data = this.props.data.showData;
 
     const city = data.city.split(' ').join('-');
     const venue = data.cotVenue
