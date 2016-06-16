@@ -2,8 +2,8 @@ import React, { StyleSheet, TabBarIOS, View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TabBarActions from '../actions/tabBar';
-import MapTab from './MapTab';
 import DetailsTab from './DetailsTab';
+import MapTab from './MapTab';
 import TicketsTab from './TicketsTab';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -21,7 +21,7 @@ export class ShowDetailView extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.props.tour.selectedTab !== 'details') {
+    if (this.props.tour.selectedTab !== 'Details') {
       this.props.resetSelectedTab();
     }
   }
@@ -30,6 +30,42 @@ export class ShowDetailView extends React.Component {
     if (this.props.tour.selectedTab !== tappedTab) {
       this.props.changeTab(tappedTab);
     }
+  }
+
+  renderTabBarItems() {
+    const tabsData = [
+      {
+        title: 'Details',
+        iconName: 'info',
+        component: DetailsTab
+      },
+      {
+        title: 'Map',
+        iconName: 'map-marker',
+        component: MapTab
+      },
+      {
+        title: 'Tickets',
+        iconName: 'ticket',
+        component: TicketsTab
+      }
+    ];
+
+    const tabs = tabsData.map(tab => {
+      return (
+        <Icon.TabBarItemIOS
+          iconName={tab.iconName}
+          title={tab.title}
+          onPress={() => this.changeTab(tab.title)}
+          selected={this.props.tour.selectedTab === tab.title}
+          key={tab.title}
+        >
+          {React.createElement(tab.component, {data: this.props.data})}
+        </Icon.TabBarItemIOS>
+      )
+    })
+
+    return tabs;
   }
 
   render() {
@@ -41,38 +77,7 @@ export class ShowDetailView extends React.Component {
           style={styles.tabBar}
           selectedTab={this.props.tour.selectedTab}
         >
-          <Icon.TabBarItemIOS
-            iconName={'info'}
-            title={'Info'}
-            onPress={() => this.changeTab('details')}
-            selected={this.props.tour.selectedTab === 'details'}
-          >
-            <DetailsTab
-              data={this.props.data}
-            />
-          </Icon.TabBarItemIOS>
-
-          <Icon.TabBarItemIOS
-            iconName={'map-marker'}
-            title={'Map'}
-            onPress={() => this.changeTab('map')}
-            selected={this.props.tour.selectedTab === 'map'}
-          >
-            <MapTab
-              data={this.props.data}
-            />
-          </Icon.TabBarItemIOS>
-
-          <Icon.TabBarItemIOS
-            iconName={'ticket'}
-            title={'Tickets'}
-            onPress={() => this.changeTab('tickets')}
-            selected={this.props.tour.selectedTab === 'tickets'}
-          >
-            <TicketsTab
-              data={this.props.data.showData}
-            />
-          </Icon.TabBarItemIOS>
+          {this.renderTabBarItems()}
         </TabBarIOS>
       </View>
     );
