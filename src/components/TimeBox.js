@@ -1,11 +1,12 @@
 import React, { Text, StyleSheet, View } from 'react-native';
+import MyText from './MyText';
 
 export default class TimeBox extends React.Component {
   render() {
     return (
       <View style={styles.timeBoxContainer}>
-        <Text style={styles.text}>{this.props.text}</Text>
-        <Text style={styles.time}>{this.props.time}</Text>
+        <MyText type={'timeBoxText'}>{this.props.text}</MyText>
+        <MyText type={'timeBoxTime'}>{this.props.time}</MyText>
       </View>
     );
   }
@@ -19,14 +20,4 @@ const styles = StyleSheet.create({
     padding: 20,
     width: 90
   },
-  text: {
-    fontSize: 16,
-    fontWeight: '500',
-    paddingBottom: 10,
-    color: 'darkslategrey',
-  },
-  time: {
-    fontSize: 12,
-    color: 'darkslategrey',
-  }
 });

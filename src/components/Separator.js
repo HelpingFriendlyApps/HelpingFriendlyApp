@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   separator: {
     borderWidth: .5,
     opacity: .5,
-    borderColor: '#bfce9e',
+    borderColor: '#BFCE9E',
     margin: 20
   }
 });

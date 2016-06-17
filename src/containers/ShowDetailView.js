@@ -73,7 +73,7 @@ export class ShowDetailView extends React.Component {
       <View style={styles.pageContainer}>
         <TabBarIOS
           tintColor="darkslategrey"
-          barTintColor="ivory"
+          barTintColor="#FCFFFD"
           style={styles.tabBar}
           selectedTab={this.props.tour.selectedTab}
         >
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   tabBar: {
-    backgroundColor: 'ivory',
+    backgroundColor: '#FCFFFD',
   },
 });
 
