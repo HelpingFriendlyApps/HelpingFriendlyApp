@@ -2,6 +2,7 @@ import React, { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-carousel';
 import TimeBox from '../components/TimeBox';
 import Separator from '../components/Separator';
+import MyText from '../components/MyText';
 
 export default class DetailsTab extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ export default class DetailsTab extends React.Component {
           </Carousel>
         </View>
         <View style={styles.container}>
-          <Text style={styles.venue}>{data.venue}</Text>
+          <MyText type={'venue'}>{data.venue}</MyText>
           <Separator />
             <View style={styles.timesContainer}>
               <TimeBox
@@ -76,13 +77,6 @@ const styles = StyleSheet.create({
   photo: {
     width: fullWidth,
     height: 220,
-  },
-  venue: {
-    fontSize: 30,
-    letterSpacing: 1,
-    color: 'darkslategrey',
-    fontWeight: '600',
-    textAlign: 'center'
   },
   timesContainer: {
     flexDirection: 'row',

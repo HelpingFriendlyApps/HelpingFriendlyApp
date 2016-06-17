@@ -1,5 +1,6 @@
 import React, { Image, ListView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ShowDetailView from '../containers/ShowDetailView';
+import MyText from './MyText';
 
 export default class ShowRow extends React.Component {
   constructor(props) {
@@ -29,11 +30,11 @@ export default class ShowRow extends React.Component {
         >
           <View style={styles.row}>
             <View style={styles.dateContainer}>
-              <Text style={styles.date}>{show.slashDate}</Text>
+              <MyText type={'showRowDate'}>{show.slashDate}</MyText>
             </View>
             <View style={styles.venueLocationContainer}>
-              <Text style={styles.venue}>{show.venue} </Text>
-              <Text style={styles.location}>{show.city}, {show.state}</Text>
+              <MyText type={'showRowVenue'}>{show.venue} </MyText>
+              <MyText type={'showRowLocation'}>{show.city}, {show.state}</MyText>
             </View>
           </View>
         </Image>
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   row: {
     padding: 20,
     flexDirection: 'row',
-    height: 120
+    height: 120,
   },
   backgroundPhoto: {
     flex: 1,
@@ -64,28 +65,6 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   dateContainer: {
-    width: 60
+    width: 60,
   },
-  date: {
-    textAlign: 'left',
-    color: 'white',
-    fontSize: 20,
-    fontWeight: '600',
-    textShadowColor: 'black',
-    textShadowOffset: {width: 2, height: 1}
-  },
-  venue: {
-    fontSize: 22,
-    color: 'white',
-    fontWeight: '600',
-    textShadowColor: 'black',
-    textShadowOffset: {width: 2, height: 1}
-  },
-  location: {
-    fontSize: 16,
-    color: 'white',
-    fontWeight: '400',
-    textShadowColor: 'black',
-    textShadowOffset: {width: 2, height: 1}
-  }
 });
